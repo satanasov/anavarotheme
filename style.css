@@ -1,0 +1,358 @@
+body {
+	text-align: center;
+	margin: 0;
+	padding: 5px 2px 5px 2px;
+	font-family: trebuchet ms, arial, helvetica, sans-serif;
+	font-size: 10pt;
+	background: #0D0B0D;
+	color: #E8D17E;
+}
+
+// Menu making it responsive!
+#main-nav   {
+    border: 3px solid #FF0000;
+    height: 30px; /* set to the height you want your menu to be */
+    margin: auto; /* just to give some spacing */
+    width: 100%;
+    display: block;
+}
+#main-nav ul    {
+    margin: 0;
+    padding: 0; /* only needed if you have not done a CSS reset */
+}
+#main-nav li    {
+    display: block;
+    float: left;
+    line-height: 30px; /* this should be the same as your #main-nav height */
+    height: 30px; /* this should be the same as your #main-nav height */
+    margin: 0; padding: 0; /* only needed if you don't have a reset */
+    position: relative; /* this is needed in order to position sub menus */
+}
+#main-nav li a  {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+}
+#main-nav .current-menu-item a, #main-nav .current_page_item a, #main-nav a:hover {
+    color: #000;
+    background: #ccc;
+}
+#main-nav ul ul { /* this targets all sub menus */
+    text-align: left;
+    z-index: 9999;
+    display: none; /* hide all sub menus from view */
+    position: absolute;
+    top: 30px; /* this should be the same height as the top level menu -- height + padding + borders */
+}
+#main-nav ul ul li { /* this targets all submenu items */
+    float: none; /* overwriting our float up above */
+    width: 150px; /* set to the width you want your sub menus to be. This needs to match the value we set below */
+}
+#main-nav ul ul li a { /* target all sub menu item links */
+    padding: 5px 10px; /* give our sub menu links a nice button feel */
+}
+
+#main-nav ul li:hover > ul {
+    display: block; /* show sub menus when hovering over a parent */
+}
+
+#main-nav ul ul li ul {
+    /* target all second, third, and deeper level sub menus */
+    left: 150px; /* this needs to match the sub menu width set above -- width + padding + borders */
+    top: 0; /* this ensures the sub menu starts in line with its parent item */
+}
+
+a:link {
+	text-decoration:none;
+	color: #E8D17E;
+}
+a:visited {
+	text-decoration:none;
+	color: #E8D17E;
+}
+a:active {
+	text-decoration:none;
+	color: #E8D17E;
+}
+a:hover {
+	text-decoration:none;
+	color: #E8D17E;
+}
+
+/*links in paragraphs*/
+p a:link {
+        text-decoration:none;
+        color: #A8A889;
+}
+p a:visited {
+        text-decoration:none;
+        color: #A8A889;
+}
+p a:active {
+        text-decoration:none;
+        color: #A8A889;
+}
+p a:hover {
+        text-decoration:none;
+        color: #A8A889;
+}
+
+
+
+div.mainWrap{
+	position: relative;
+	margin: 0 auto 0 auto;
+	width: 1024px;
+}
+
+div.posts{
+	float: left;
+	width: 712px;
+}
+
+div.right {
+	float: right;
+	width: 305px;
+	margin: 10px auto 0 auto;
+}
+
+div.posting{
+	-moz-border-radius: 10px 0px 0px 10px;
+	-webkit-border-radius: 10px 0px 0px 10px; 
+	margin: 20px auto 0px auto;
+	text-align: justify;
+	padding: 5px 10px 15px 10px;
+	background-color: #302A30;
+}
+
+
+
+h1 {
+	font-size:14pt;
+	text-align: left;
+	color: #A8A889;
+	font-weight: bold;
+}
+
+h2 {
+	text-align: left;
+	font-size:12pt;
+	color: #A8A889;
+	font-weight: bold;
+}
+
+h3 {
+	text-align: left;
+	font-size:10pt;
+	color: #A8A889;
+	font-weight: bold;
+}
+
+h4 {
+	text-align: left;
+	font-size:9pt;
+	color: #A8A889;
+	font-weight: bold;
+}
+
+h5 {
+	text-align: left;
+	font-size:8pt;
+	color: #A8A889;
+	font-weight: bold;
+}
+
+h6 {
+	text-align: left;
+	font-size:7pt;
+	color: #A8A889;
+	font-weight: bold;
+}
+
+.postTitle {
+		font-size:20pt;
+		text-align: left;
+		color: #A8A889;
+		font-weight: bold;
+		margin: 1px 0 0 0;
+		display: block;
+}
+.postInfo {
+	margin: 1px 0 5px 0;
+	font-size:8pt;
+	color: #A8A889;
+}
+
+img.alignleft {
+  float: left;
+  margin: 10px 15px 5px 0;
+  }
+img.alignright {
+  float: right;
+  margin: 10px 0 5px 15px;
+  }
+img.aligncenter {
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+  }
+
+blockquote{
+	background: #070707;
+	border: 1px solid #060606;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px 15px;
+	margin: 5px 5px 5px 5px;
+	font-family: courier;
+	font-size: 9pt;
+	color: #fff;
+}
+
+table {
+margin: 15px;
+}
+
+.highlight {
+  color: #222;
+  font-weight: bold;
+  }
+
+.cleared {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  }
+
+.alignleft {
+  float: left;
+  margin: 10px 15px 5px 0;
+  }
+.alignright {
+  float: right;
+  margin: 10px 0 5px 15px;
+  }
+.aligncenter,
+div.aligncenter {
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+  }
+  
+.commentsMain {
+	font-size: 12pt;
+	border: 1px solid #E8D17E;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin: 10px 5px 10px 5px;
+	padding: 8px 10px;
+
+}
+.tagsMain {
+	font-size: 7pt;
+	margin: 5px 0px 10px 5px;
+	padding: 8px 0px;
+	display: block;
+}
+
+/*Sidebar defs*/
+
+.widget {
+	-moz-border-radius: 0px 10px 10px 0px;
+	-webkit-border-radius: 0px 10px 10px 0px; 
+	margin: 10px auto 0px auto;
+	text-align: justify;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #302A30;
+}
+
+/*comments */
+.comment {
+
+}
+
+.even {
+	background-color: #0D0B0D;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px; 
+	margin: 10px auto 0px auto;
+	text-align: justify;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.odd {
+	background-color: #302A30;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px; 
+	margin: 10px auto 0px auto;
+	text-align: justify;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Header */
+.header {
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px; 
+	margin: 0 auto 0 auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 1024px;
+	height: 153px;
+	background-color: #302A30;
+}
+
+.logoImg {
+	width: 204px;
+	float: left;
+}
+
+.logoTitle {
+	color: #A8A889;
+	width: 805px;
+	float: right;
+	margin-top: 40px;
+}
+
+#arch {
+	left: 520px;
+}
+#cats {
+	left: 405px;
+}
+#links {
+	left: 720px;
+}
+#pages {
+	left: 610px;
+}
+
+/*footer */
+.footer {
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px; 
+	margin: 20px auto 0 auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 1024px;
+	background-color: #302A30;
+}
+
+.footer p {
+	margin: 0;
+	font-size: 7pt;
+	
+}
+
+
