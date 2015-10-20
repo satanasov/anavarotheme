@@ -11,21 +11,10 @@ foreach ($options as $value) {
 }
 ?>
 <!DOCTYPE html>
-<!--[if IE 6]>
-<html id="ie6" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 7]>
-<html id="ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html id="ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?> xmlns:fb="https://www.facebook.com/2008/fbml">
-<!--<![endif]-->
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
         <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
         <meta name="robots" content="follow, all" />
@@ -67,7 +56,6 @@ foreach ($options as $value) {
         <meta name="keywords" content="<?php echo $tags; ?>"/>
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <?php } ?>
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <?php 
@@ -219,8 +207,21 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
         <meta property="fb:admins" content="<?php echo $anavaro_fbadmins ?>"/>
         <?php } ?>
         <?php wp_head(); ?>
+		<!--// Add bootstrap //-->
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/bootstrap/css/bootstrap.css' ?>" type="text/css">
+		<script src="<?php echo get_template_directory_uri() . '/bootstrap/js/bootstrap.js' ?>"></script>
+		<!--// Add aditional JS //-->
+		<script src="<?php echo get_template_directory_uri() . '/js/jquery.waypoints.min.js' ?>"></script>
+		<script src="<?php echo get_template_directory_uri() . '/js/shortcuts/sticky.min.js' ?>"></script>
+		<!--// Styles //-->
+		<!--//<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /> //-->
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/base.css' ?>" type="text/css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/menu.css' ?>" type="text/css">
+		
     </head>
     <body <?php body_class(); ?>>
+	<div class="trigger1"></div>
+	<div class="container-fluid">
     <?php if ($anavaro_specialfb == "on") { ?>
         <div id="fb-root"></div>
         <script>   
@@ -232,13 +233,12 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <?php } ?>
-    <header id="branding" role="banner">
-        <div class="header">
-            <div class="logoImg"><center><a href="<?php bloginfo('home') ?>" target="_self"><img src="<?php bloginfo('template_directory'); ?>/img/gerb143alpha.png"/></a></center></div> 
-            <div>
-            <div class="logoTitle"><font size="25">ANAVARO.COM</font></div>
-            <div id="main-nav">
-                <?php wp_nav_menu(array('theme_location' => 'main_nav', 'container' => '')); ?>
-            </div>
-        </div>
-      </header>  
+    <div id="branding" class="row">
+		<div id="logo" class="col-md-3">
+			<a href="<?php echo get_site_url(); ?>"><?php echo bloginfo('name'); ?></a>
+		</div>
+		<div id="main-nav" class="col-md-9">
+			<?php wp_nav_menu(array('theme_location' => 'main_nav', 'container' => '')); ?>
+		</div>
+		<div class="clear"></div>
+	</div>  

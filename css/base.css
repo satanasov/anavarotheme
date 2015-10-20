@@ -1,0 +1,19 @@
+/*
+	Base CSS
+*/
+
+.clear {
+	clear: both;
+}
+
+#branding {
+	background-color: #2D2F34;
+	color: #cccccc;
+}
+
+.trigger1 {
+	position: absolute;
+	width: 100%;
+	top: 50px;
+	border: 1px solid;
+}
