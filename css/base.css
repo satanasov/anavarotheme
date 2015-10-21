@@ -9,6 +9,7 @@
 #branding {
 	background-color: #2D2F34;
 	color: #cccccc;
+	z-index: 9999;
 }
 
 .trigger1 {
@@ -16,4 +17,23 @@
 	width: 100%;
 	top: 50px;
 	border: 1px solid;
+}
+
+.splitter {
+	height: 100px;
+}
+
+#badges .icon {
+	text-align: center;
+	display: block;
+}
+
+#badges .text {
+	display: block;
+	text-align: justify;
+	margin-top: 10px;
+}
+
+#badges .text p:first-letter {
+	margin-left: 10px;
 }

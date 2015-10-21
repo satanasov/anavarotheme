@@ -210,6 +210,8 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
 		<!--// Add bootstrap //-->
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/bootstrap/css/bootstrap.css' ?>" type="text/css">
 		<script src="<?php echo get_template_directory_uri() . '/bootstrap/js/bootstrap.js' ?>"></script>
+		<!--// Add Font Awsome //-->
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/fontawesome/css/font-awesome.min.css' ?>" type="text/css">
 		<!--// Add aditional JS //-->
 		<script src="<?php echo get_template_directory_uri() . '/js/jquery.waypoints.min.js' ?>"></script>
 		<script src="<?php echo get_template_directory_uri() . '/js/shortcuts/sticky.min.js' ?>"></script>
@@ -217,6 +219,7 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
 		<!--//<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /> //-->
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/base.css' ?>" type="text/css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/menu.css' ?>" type="text/css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/carousel.css' ?>" type="text/css">
 		
     </head>
     <body <?php body_class(); ?>>
@@ -234,10 +237,10 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
         }(document, 'script', 'facebook-jssdk'));</script>
     <?php } ?>
     <div id="branding" class="row">
-		<div id="logo" class="col-md-3">
+		<div id="logo" class="col-md-3 center-block">
 			<a href="<?php echo get_site_url(); ?>"><?php echo bloginfo('name'); ?></a>
 		</div>
-		<div id="main-nav" class="col-md-9">
+		<div id="main-nav" class="col-md-9 center-block">
 			<?php wp_nav_menu(array('theme_location' => 'main_nav', 'container' => '')); ?>
 		</div>
 		<div class="clear"></div>

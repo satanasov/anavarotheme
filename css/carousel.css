@@ -1,0 +1,50 @@
+.baners {
+	position: relative;
+	width: 100%
+}
+
+.baners .overlay .tagline {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	width: 60%;
+	font-size: 62pt;
+	z-index: 5;
+	text-align: center;
+	font-weight: bold;
+}
+
+.baners .overlay .smalltext {
+	position: absolute;
+	bottom: 5%;
+	font-size: 15pt;
+	z-index: 5;
+	text-align: left;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* add custom */
+@media (min-width: 1024px) {
+	.baners .overlay .tagline {
+		top: 20%;
+	}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.baners .overlay .tagline {
+		top: 25%;
+	}
+	.baners .overlay .smalltext {
+		bottom: 10%;
+	}
+}
+

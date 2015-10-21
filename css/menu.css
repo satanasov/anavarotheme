@@ -1,11 +1,51 @@
+#main-nav {
+	padding: 15px;
+}
+#main-nav ul    {
+	display: none;
+}
+#main-nav select {
+	display: block;
+}
+/* Time for some logo magic */
+#branding #logo {
+	padding: 15px;
+	color: #cccccc;
+}
+#branding #logo a {
+	color: #FFFFFF;
+	line-height: 30px; /* this should be the same as your #main-nav height */
+	height: 30px; /* this should be the same as your #main-nav height */
+	margin: 20px;
+	font-size: 25px;
+	font-weight: bold;
+}
+#branding #logo a:hover{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.selector {
+	border: 1px solid #8692fd;
+	background-color: #2D2F34;
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
 	#main-nav {
 		float: right;
 		padding: 15px;
 	}
+	#main-nav select {
+		display: none;
+	}
 	#main-nav ul    {
+		display: block;
 		float: right;
 		margin: 0; 
 		padding: 0; /* only needed if you have not done a CSS reset */
@@ -55,33 +95,13 @@
 		top: 0; /* this ensures the sub menu starts in line with its parent item */
 	}
 	
-	/* Time for some logo magic */
-	#branding #logo {
-		padding: 15px;
-		color: #cccccc;
-	}
-	#branding #logo a {
-		color: #FFFFFF;
-		line-height: 30px; /* this should be the same as your #main-nav height */
-		height: 30px; /* this should be the same as your #main-nav height */
-		margin: 20px;
-		font-size: 25px;
-		font-weight: bold;
-	}
-	#branding #logo a:hover{
-		color: #FFFFFF;
-		text-decoration: none;
-	}
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
 	/* we don't need stuck!! */
 	.stuck {
 		position: fixed;
 		top: 0;
 		width: 100%;
 		height: 45px;
+		z-index: 9999;
 	}
 
 	.stuck #main-nav li {
