@@ -4,29 +4,158 @@
 	<div id="image1" class="baners">
 		<img src="<?php echo get_template_directory_uri() . '/img/markus_spike.jpg'; ?>" class="img-responsive">
 		<div class="overlay">
-			<span class="tagline">Lorem ipsum lare iquepsum </span>
-			<span class="smalltext">Lorem ipsum lare iquepsum Lorem ipsum lare iquepsum Lorem ipsum lare iquepsum Lorem ipsum lare iquepsum Lorem ipsum lare iquepsum Lorem ipsum lare iquepsum </span>
+			<span class="tagline">Lorem ipsum lare iquepsum ipsum!</span>
+			<span class="smalltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta nisl eget tortor placerat tempus. Nunc ut nisi vel lectus egestas venenatis. In quam felis, scelerisque at cursus non, hendrerit a dui. Duis eget massa tortor. Nulla facilisi nullam.</span>
+		</div>
+	</div>
+	<div id="image2" class="baners hidden">
+		<img src="<?php echo get_template_directory_uri() . '/img/markus_spiske2.jpg'; ?>" class="img-responsive">
+		<div class="overlay">
+			<span class="tagline">Lorem ipsum lare iquepsum ipsum!</span>
+			<span class="smalltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta nisl eget tortor placerat tempus. Nunc ut nisi vel lectus egestas venenatis. In quam felis, scelerisque at cursus non, hendrerit a dui. Duis eget massa tortor. Nulla facilisi nullam.</span>
+		</div>
+	</div>
+	<div id="image3" class="baners hidden">
+		<img src="<?php echo get_template_directory_uri() . '/img/markus_spiske3.jpg'; ?>" class="img-responsive">
+		<div class="overlay">
+			<span class="tagline">Lorem ipsum lare iquepsum ipsum!</span>
+			<span class="smalltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta nisl eget tortor placerat tempus. Nunc ut nisi vel lectus egestas venenatis. In quam felis, scelerisque at cursus non, hendrerit a dui. Duis eget massa tortor. Nulla facilisi nullam.</span>
+		</div>
+	</div>
+	<div id="image4" class="baners hidden">
+		<img src="<?php echo get_template_directory_uri() . '/img/markus_spike.jpg'; ?>" class="img-responsive">
+		<div class="overlay">
+			<span class="tagline">Lorem ipsum lare iquepsum ipsum!</span>
+			<span class="smalltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta nisl eget tortor placerat tempus. Nunc ut nisi vel lectus egestas venenatis. In quam felis, scelerisque at cursus non, hendrerit a dui. Duis eget massa tortor. Nulla facilisi nullam.</span>
+		</div>
+	</div>
+	<div id="image5" class="baners hidden">
+		<img src="<?php echo get_template_directory_uri() . '/img/markus_spike.jpg'; ?>" class="img-responsive">
+		<div class="overlay">
+			<span class="tagline">Lorem ipsum lare iquepsum ipsum!</span>
+			<span class="smalltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta nisl eget tortor placerat tempus. Nunc ut nisi vel lectus egestas venenatis. In quam felis, scelerisque at cursus non, hendrerit a dui. Duis eget massa tortor. Nulla facilisi nullam.</span>
 		</div>
 	</div>
 </div>
 <div class="splitter"></div>
-<div class="row" id="badges">
-	<div class="col-md-2"></div>
-	<div id="leftBadge" class="col-md-2">
-		<span class="icon"><i class="fa fa-rebel fa-5x"></i></span>
-		<span class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit tristique maximus. Nunc vitae aliquam magna. Curabitur elementum blandit sem, ac tincidunt est. Suspendisse interdum sodales tincidunt. Etiam commodo porttitor tortor, et porttitor metus vestibulum ac. Maecenas scelerisque tortor quis nisl vehicula, et venenatis dolor commodo. Donec lacinia, lorem id ultrices feugiat, tortor sapien luctus leo, ut cursus enim nunc ac nisi. Donec magna dui, vestibulum et viverra ac, pulvinar ac felis. Pellentesque rutrum lacinia dictum.</span>
-	</div>
-	<div class="col-md-1"></div>
-	<div id="midleBadge" class="col-md-2">
-		<span class="icon"><i class="fa fa-camera-retro fa-5x"></i></span>
-		<span class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit tristique maximus. Nunc vitae aliquam magna. Curabitur elementum blandit sem, ac tincidunt est. Suspendisse interdum sodales tincidunt. Etiam commodo porttitor tortor, et porttitor metus vestibulum ac. Maecenas scelerisque tortor quis nisl vehicula, et venenatis dolor commodo. Donec lacinia, lorem id ultrices feugiat, tortor sapien luctus leo, ut cursus enim nunc ac nisi. Donec magna dui, vestibulum et viverra ac, pulvinar ac felis. Pellentesque rutrum lacinia dictum.</span>
-	</div>
-	<div class="col-md-1"></div>
-	<div id="midleBadge" class="col-md-2">
-		<span class="icon">T</span>
-		<span class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit tristique maximus. Nunc vitae aliquam magna. Curabitur elementum blandit sem, ac tincidunt est. Suspendisse interdum sodales tincidunt. Etiam commodo porttitor tortor, et porttitor metus vestibulum ac. Maecenas scelerisque tortor quis nisl vehicula, et venenatis dolor commodo. Donec lacinia, lorem id ultrices feugiat, tortor sapien luctus leo, ut cursus enim nunc ac nisi. Donec magna dui, vestibulum et viverra ac, pulvinar ac felis. Pellentesque rutrum lacinia dictum.</span>
+<div class="container">
+	<div class="row" id="badges">
+		<div id="leftBadge" class="col-md-4">
+			<span class="icon"><i class="fa fa-rebel fa-5x"></i></span>
+			<span class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit tristique maximus. Nunc vitae aliquam magna. Curabitur elementum blandit sem, ac tincidunt est. Suspendisse interdum sodales tincidunt. Etiam commodo porttitor tortor, et porttitor metus vestibulum ac. Maecenas scelerisque tortor quis nisl vehicula, et venenatis dolor commodo. Donec lacinia, lorem id ultrices feugiat, tortor sapien luctus leo, ut cursus enim nunc ac nisi. Donec magna dui, vestibulum et viverra ac, pulvinar ac felis. Pellentesque rutrum lacinia dictum.</span>
+		</div>
+		<div id="midleBadge" class="col-md-4">
+			<span class="icon"><i class="fa fa-camera-retro fa-5x"></i></span>
+			<span class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit tristique maximus. Nunc vitae aliquam magna. Curabitur elementum blandit sem, ac tincidunt est. Suspendisse interdum sodales tincidunt. Etiam commodo porttitor tortor, et porttitor metus vestibulum ac. Maecenas scelerisque tortor quis nisl vehicula, et venenatis dolor commodo. Donec lacinia, lorem id ultrices feugiat, tortor sapien luctus leo, ut cursus enim nunc ac nisi. Donec magna dui, vestibulum et viverra ac, pulvinar ac felis. Pellentesque rutrum lacinia dictum.</span>
+		</div>
+		<div id="midleBadge" class="col-md-4">
+			<span class="icon">T</span>
+			<span class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit tristique maximus. Nunc vitae aliquam magna. Curabitur elementum blandit sem, ac tincidunt est. Suspendisse interdum sodales tincidunt. Etiam commodo porttitor tortor, et porttitor metus vestibulum ac. Maecenas scelerisque tortor quis nisl vehicula, et venenatis dolor commodo. Donec lacinia, lorem id ultrices feugiat, tortor sapien luctus leo, ut cursus enim nunc ac nisi. Donec magna dui, vestibulum et viverra ac, pulvinar ac felis. Pellentesque rutrum lacinia dictum.</span>
+		</div>
 	</div>
 </div>
+<div class="splitter"></div>
+<?php 
+	/**
+	* Get last 4 posts so we cen fill the fields
+	*/
+	$args = array(
+		'numberposts' => 5,
+		'orderby' => 'post_date',
+		'order' => 'DESC',
+		'post_type' => 'post',
+		'post_status'      => 'publish',
+	);
+	$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+	//var_dump(get_permalink($recent_posts[0]['ID']));
+?>
+	<div class="row" id="latest">
+		<p class="text-center">Latest blog posts ... </p>
+	</div>
+	<div class="row" id="posts">
+		<div class="col-sm-1 col-lg-1"></div>
+		<div class="col-sm-5 col-md-3 col-lg-2">
+			<a href="<?php echo get_permalink($recent_posts[0]['ID']) ?>">
+			<?php
+				if (has_post_thumbnail( $recent_posts[0]['ID'] ))
+				{
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts[0]['ID'] ), 'single-post-thumbnail' );
+					?>
+						<img src="<?php echo $image[0]?>" class="image-responsive" width="100%" height="100%" />
+					<?php
+					unset($image);
+				}
+			?>
+			<span class="title"><?php echo $recent_posts[0]['post_title'] ?></span>
+			</a>
+			<span class="excerpt"><p><?php echo $recent_posts[0]['post_excerpt'] ?></span>
+		</div>
+		<div class="col-sm-5 col-md-3 col-lg-2">
+			<a href="<?php echo get_permalink($recent_posts[1]['ID']) ?>">
+			<?php
+				if (has_post_thumbnail( $recent_posts[1]['ID'] ))
+				{
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts[1]['ID'] ), 'single-post-thumbnail' );
+					?>
+						<img src="<?php echo $image[0]?>" class="image-responsive" width="100%" height="100%" />
+					<?php
+					unset($image);
+				}
+			?>
+			<span class="title"><?php echo $recent_posts[1]['post_title'] ?></span>
+			</a>
+			<span class="excerpt"><p><?php echo $recent_posts[1]['post_excerpt'] ?></span>
+		</div>
+		<div class="col-sm-5 col-md-3 col-lg-2">
+			<a href="<?php echo get_permalink($recent_posts[2]['ID']) ?>">
+			<?php
+				if (has_post_thumbnail( $recent_posts[2]['ID'] ))
+				{
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts[2]['ID'] ), 'single-post-thumbnail' );
+					?>
+						<img src="<?php echo $image[0]?>" class="image-responsive" width="100%" height="100%" />
+					<?php
+					unset($image);
+				}
+			?>
+			<span class="title"><?php echo $recent_posts[2]['post_title'] ?></span>
+			</a>
+			<span class="excerpt"><p><?php echo $recent_posts[2]['post_excerpt'] ?></span>
+		</div>
+		<div class="col-sm-5 col-md-3 col-lg-2">
+			<a href="<?php echo get_permalink($recent_posts[3]['ID']) ?>">
+			<?php
+				if (has_post_thumbnail( $recent_posts[3]['ID'] ))
+				{
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts[3]['ID'] ), 'single-post-thumbnail' );
+					?>
+						<img src="<?php echo $image[0]?>" class="image-responsive" width="100%" height="100%" />
+					<?php
+					unset($image);
+				}
+			?>
+			<span class="title"><?php echo $recent_posts[3]['post_title'] ?></span>
+			</a>
+			<span class="excerpt"><p><?php echo $recent_posts[3]['post_excerpt'] ?></span>
+		</div>
+		<div class="col-sm-5 col-md-3 col-lg-2">
+			<a href="<?php echo get_permalink($recent_posts[4]['ID']) ?>">
+			<?php
+				if (has_post_thumbnail( $recent_posts[4]['ID'] ))
+				{
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts[4]['ID'] ), 'single-post-thumbnail' );
+					?>
+						<img src="<?php echo $image[0]?>" class="image-responsive" width="100%" height="100%" />
+					<?php
+					unset($image);
+				}
+			?>
+			<span class="title"><?php echo $recent_posts[4]['post_title'] ?></span>
+			</a>
+			<span class="excerpt"><p><?php echo $recent_posts[4]['post_excerpt'] ?></span>
+		</div>
+	</div>
+<div class="splitter"></div>
 <div class="text">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit tristique maximus. Nunc vitae aliquam magna. Curabitur elementum blandit sem, ac tincidunt est. Suspendisse interdum sodales tincidunt. Etiam commodo porttitor tortor, et porttitor metus vestibulum ac. Maecenas scelerisque tortor quis nisl vehicula, et venenatis dolor commodo. Donec lacinia, lorem id ultrices feugiat, tortor sapien luctus leo, ut cursus enim nunc ac nisi. Donec magna dui, vestibulum et viverra ac, pulvinar ac felis. Pellentesque rutrum lacinia dictum.
 

@@ -1,0 +1,20 @@
+#latest p{
+	font-size: 32pt;
+	font-weight: bold;
+	color: #293D66;
+}
+#posts .title {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16pt;
+}
+#posts .excerpt {
+	text-align: justify;
+}
+#posts .excerpt p:first-letter {
+	margin-left: 7px;
+}
+#posts img {
+	padding: 5px;
+}

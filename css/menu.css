@@ -8,6 +8,9 @@
 	display: block;
 }
 /* Time for some logo magic */
+#branding {
+	transition: 0.4s;
+}
 #branding #logo {
 	padding: 15px;
 	color: #cccccc;

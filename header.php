@@ -220,6 +220,7 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/base.css' ?>" type="text/css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/menu.css' ?>" type="text/css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/carousel.css' ?>" type="text/css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/posts.css' ?>" type="text/css">
 		
     </head>
     <body <?php body_class(); ?>>

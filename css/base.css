@@ -2,6 +2,10 @@
 	Base CSS
 */
 
+.debug {
+	border: 2px solid #ff0000;
+}
+
 .clear {
 	clear: both;
 }
@@ -15,8 +19,11 @@
 .trigger1 {
 	position: absolute;
 	width: 100%;
-	top: 50px;
-	border: 1px solid;
+	top: 15px;
+}
+
+.hidden {
+	display: none;
 }
 
 .splitter {
@@ -36,4 +43,8 @@
 
 #badges .text p:first-letter {
 	margin-left: 10px;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }
