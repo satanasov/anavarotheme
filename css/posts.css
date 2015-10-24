@@ -16,5 +16,10 @@
 	margin-left: 7px;
 }
 #posts img {
+	max-width: 100%;
 	padding: 5px;
+}
+
+#posts .card {
+	height: 640px;
 }

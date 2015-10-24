@@ -225,7 +225,6 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     </head>
     <body <?php body_class(); ?>>
 	<div class="trigger1"></div>
-	<div class="container-fluid">
     <?php if ($anavaro_specialfb == "on") { ?>
         <div id="fb-root"></div>
         <script>   
@@ -237,6 +236,7 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <?php } ?>
+	<div class="container-fluid">
     <div id="branding" class="row">
 		<div id="logo" class="col-md-3 center-block">
 			<a href="<?php echo get_site_url(); ?>"><?php echo bloginfo('name'); ?></a>
@@ -245,4 +245,5 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
 			<?php wp_nav_menu(array('theme_location' => 'main_nav', 'container' => '')); ?>
 		</div>
 		<div class="clear"></div>
-	</div>  
+	</div>
+	</div>

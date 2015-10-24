@@ -1,9 +1,41 @@
 <?php
 if ( function_exists('register_sidebar') ) {
-     register_sidebar(array(
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-    ));
+	register_sidebar(
+		array(
+			'name'	=> 'Right blog',
+			'id'	=> 'right-sidebar',
+			'description'	=> 'All right',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'	=> 'Bottom left',
+			'id'	=> 'bottom-left',
+			'description'	=> 'Bottom left sidebar (this is the second (first is copiright info))',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'	=> 'Bottom middle',
+			'id'	=> 'bottom-middle',
+			'description'	=> 'Bottom middle sidebar',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'	=> 'Bottom left',
+			'id'	=> 'bottom-right',
+			'description'	=> 'Bottom right sidebar',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+		)
+	);
 }
 $themename = 'Anavaro';
 $shortname = 'anavaro';
@@ -356,4 +388,134 @@ function register_my_menus() {
 		)
 	);
 }
+
+// Let's add some customization options.
+
+function anavaro_customize_register($wp_customize) {
+	$wp_customize->add_section( 
+		'anavaro_carousel_options', 
+		array(
+			'title'       => __( 'Carousel options', 'anavaro' ),
+			'priority'    => 100,
+			'capability'  => 'edit_theme_options',
+			'description' => __('Change front page carousel. If you want to disable any image - just leave the address empty. If you are going to use carousel you need to have at least first image', 'anavaro'), 
+		) 
+	);
+	
+	// Use carousel
+	$wp_customize->add_setting( 'carousel_active',
+		array(
+			'default' => 1,
+			'transport'   => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'carousel_active',
+			array(
+				'label'          => __( 'Use carousel', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+				'type'           => 'checkbox'
+			)
+		)
+	);
+	// First image control
+	$wp_customize->add_setting( 'carousel_first_slide_image',
+		array(
+			'sanitize_callback' => 'esc_url_raw',
+			'default' => get_template_directory_uri() . '/img/4054180179_e146a52baa_o.jpg',
+			'transport'   => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'carousel_first_slide_image',
+			array(
+				'label'          => __( 'First image:', 'anavaro' ),
+				'description' => __( 'What image should we use for first carousel slide? <br /> Best used resolution 1200x575', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+				'type'           => 'text'
+			)
+		)
+	);
+	// Second image control
+	$wp_customize->add_setting( 'carousel_second_slide_image',
+		array(
+			'default' => get_template_directory_uri() . '/img/18046343975_65c2031027_k.jpg',
+			'transport'   => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'carousel_second_slide_image',
+			array(
+				'label'          => __( 'Second image:', 'anavaro' ),
+				'description' => __( 'What image should we use for second carousel slide? <br /> Best used resolution 1200x575', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+				'type'           => 'text'
+			)
+		)
+	);
+	// Third image control
+	$wp_customize->add_setting( 'carousel_third_slide_image',
+		array(
+			'default' => get_template_directory_uri() . '/img/8499155449_1235a88784_k.jpg',
+			'transport'   => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'carousel_third_slide_image',
+			array(
+				'label'          => __( 'Third image:', 'anavaro' ),
+				'description' => __( 'What image should we use for third carousel slide? <br /> Best used resolution 1200x575', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+				'type'           => 'text'
+			)
+		)
+	);
+	// Fourth image control
+	$wp_customize->add_setting( 'carousel_fourth_slide_image',
+		array(
+			'default' => '',
+			'transport'   => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'carousel_fourth_slide_image',
+			array(
+				'label'          => __( 'Fourth image:', 'anavaro' ),
+				'description' => __( 'What image should we use for fourth carousel slide? <br /> Best used resolution 1200x575', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+				'type'           => 'text'
+			)
+		)
+	);
+	// Fifth image control
+	$wp_customize->add_setting( 'carousel_fifth_slide_image',
+		array(
+			'default' => '',
+			'transport'   => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'carousel_fifth_slide_image',
+			array(
+				'label'          => __( 'Fifth image:', 'anavaro' ),
+				'description' => __( 'What image should we use for fifth carousel slide? <br /> Best used resolution 1200x575', 'twentyfifteen' ),
+				'section'        => 'anavaro_carousel_options',
+				'type'           => 'text'
+			)
+		)
+	);
+}
+add_action('customize_register','anavaro_customize_register');
 ?>

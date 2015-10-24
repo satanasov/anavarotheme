@@ -48,3 +48,18 @@
     float: none;
     margin: 0 auto;
 }
+
+.wraper {
+	background-color: #F2F2EC;
+	width: 100%;
+	float: none;
+	margin: 0 auto;
+}
+
+#sidebar-bottom-copirght {
+	margin-top: 20px;
+}
+
+.no-padding {
+   padding: 0;
+ }
