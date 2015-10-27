@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <!--// Allocate big image carousel //-->
 <div class="container-fluid">
 	<?php
@@ -159,7 +160,7 @@
 	//var_dump(get_permalink($recent_posts[0]['ID']));
 ?>
 	<div class="row" id="latest">
-		<p class="text-center">Latest blog posts ... </p>
+		<p class="text-center"><?php if (get_option('page_for_posts')) { echo '<a href="' . get_permalink(get_option('page_for_posts')) . '">'; } ?>Latest blog posts ... <?php if (get_option('page_for_posts')) { echo '</a>'; } ?></p>
 	</div>
 	<div class="row" id="posts">
 		<div class="col-sm-1 col-lg-1"></div>

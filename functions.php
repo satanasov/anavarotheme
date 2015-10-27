@@ -427,4 +427,5 @@ function load_css() {
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css'); 
 }
 add_action('wp_enqueue_scripts','load_css');
+
 ?>
