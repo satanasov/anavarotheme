@@ -90,6 +90,7 @@
 	}
 	#main-nav ul li:hover > ul {
 		display: block; /* show sub menus when hovering over a parent */
+		z-index: 9999;
 	}
 
 	#main-nav ul ul li ul {
@@ -110,6 +111,18 @@
 	.stuck #main-nav li {
 		line-height: 15px; /* this should be the same as your #main-nav height */
 		height: 15px; /* this should be the same as your #main-nav height */
+	}
+	
+	.stuck #main-nav ul ul { /* this targets all sub menus */
+		display: none; /* hide all sub menus from view */
+		position: absolute;
+		top: 30px; /* this should be the same height as the top level menu -- height + padding + borders */
+		line-height: 30px; /* this should be the same as your #main-nav height */
+		height: 30px; /* this should be the same as your #main-nav height */
+	}
+	.stuck #main-nav ul ul li { /* this targets all submenu items */
+		line-height: 30px; /* this should be the same as your #main-nav height */
+		height: 30px; /* this should be the same as your #main-nav height */
 	}
 	.stuck #logo {
 		padding-top: 10px;

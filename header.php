@@ -1,15 +1,3 @@
-<?php
-    
-global $options;
-foreach ($options as $value) {
-    global $$value['id'];
-    if (get_settings( $value['id'] ) === FALSE) {
-        $$value['id'] = $value['default'];
-    } else {
-        $$value['id'] = get_settings( $value['id'] ); 
-    }
-}
-?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> xmlns:fb="https://www.facebook.com/2008/fbml">
     <head>
@@ -19,7 +7,7 @@ foreach ($options as $value) {
         <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
         <meta name="robots" content="follow, all" />
         <!-- META DEFS -->
-        <?php if ($anavaro_theme_seo == "on") { ?>
+        <?php if (get_option('anavaro_theme_seo') == "on") { ?>
         <meta itemprop="name" content="<?php the_title(); ?>">
         <?php 
             if (is_single()) { 
@@ -48,11 +36,11 @@ foreach ($options as $value) {
                     }
                     $tags = substr($tags,0,-1);
                     if (!strlen($tags)) {
-                        $tags = $anavaro_keywords;
+                        $tags = get_option('anavaro_keywords');
                     }
                 }
             }
-            else { $tags = $anavaro_keywords; } ?>
+            else { $tags = get_option('anavaro_keywords'); }?>
         <meta name="keywords" content="<?php echo $tags; ?>"/>
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <?php } ?>
@@ -60,20 +48,20 @@ foreach ($options as $value) {
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <?php 
         //add google plus badge link
-           if ($anavaro_gabadge != "N/A") { 
+           if (get_option('anavaro_gabadge') != "N/A") { 
             ?>
 
-            <link href="https://plus.google.com/<?php echo $anavaro_gabadge; ?>" rel="publisher" />
+            <link href="https://plus.google.com/<?php echo get_option('anavaro_gabadge'); ?>" rel="publisher" />
 
             <?php }
         ?>
         <?php 
-            if ($anavaro_gvcode != "n/a") { ?><meta name="verify-v1" content="<?php echo $anavaro_gvcode; ?>" /> <?php }
-            if ($anavaro_gacode != "UA-XXXXXXX-X") { ?>
+            if (get_option('anavaro_gvcode') != "n/a") { ?><meta name="verify-v1" content="<?php echo get_option('anavaro_gvcode'); ?>" /> <?php }
+            if (get_option('anavaro_gacode') != "UA-XXXXXXX-X") { ?>
          <script type="text/javascript">
              var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', '<?php echo $anavaro_gacode; ?>']);
-            _gaq.push(['_setDomainName', '.<?php echo $anavaro_gatdn; ?>']);
+            _gaq.push(['_setAccount', '<?php echo get_option('anavaro_gacode'); ?>']);
+            _gaq.push(['_setDomainName', '.<?php echo get_option('anavaro_gatdn'); ?>']);
             _gaq.push(['_trackPageview']);
             (function() {
                 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -84,7 +72,7 @@ foreach ($options as $value) {
         <!-- Google Analytics Social Button Tracking -->
         <script type="text/javascript" src="http://lab.anavaro.com/cdn/ga_social_tracking.js"></script>
             <?php }
-            if ($anavaro_usegpo == "on") { ?>
+            if (get_option('anavaro_usegpo') == "on") { ?>
             <script type="text/javascript">
               (function() {
                     var po = document.createElement('script'); 
@@ -96,7 +84,7 @@ foreach ($options as $value) {
             </script>
             <?php }
             
-            if ($anavaro_usegtwit == "on") { ?>
+            if (get_option('anavaro_usegtwit') == "on") { ?>
 <!-- Load Twitter JS-API asynchronously -->
 <script>
 (function(){
@@ -112,7 +100,7 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
             <?php }
               
     //Add special Facebook options for posts
-    if ($anavaro_specialfb == "on") { ?>
+    if (get_option('anavaro_specialfb') == "on") { ?>
     <!-- Begin FB Sharing for WP by Chad Von Lind. Get the latest code here: http://vonlind.com/?p=539  -->
 <?php
     if(is_single() || is_page()) {
@@ -203,15 +191,12 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
             // close layer when click-out
             document.onclick = mclose; 
         </script>
-        <?php if ($anavaro_fbadmins != "n/a") { ?>
-        <meta property="fb:admins" content="<?php echo $anavaro_fbadmins ?>"/>
+        <?php if (get_option('anavaro_fbadmins') != "n/a") { ?>
+        <meta property="fb:admins" content="<?php echo get_option('anavaro_fbadmins'); ?>"/>
         <?php } ?>
         <?php wp_head(); ?>
 		<!--// Add bootstrap //-->
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/bootstrap/css/bootstrap.css' ?>" type="text/css">
 		<script src="<?php echo get_template_directory_uri() . '/bootstrap/js/bootstrap.js' ?>"></script>
-		<!--// Add Font Awsome //-->
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/fontawesome/css/font-awesome.min.css' ?>" type="text/css">
 		<!--// Add aditional JS //-->
 		<script src="<?php echo get_template_directory_uri() . '/js/jquery.waypoints.min.js' ?>"></script>
 		<script src="<?php echo get_template_directory_uri() . '/js/shortcuts/sticky.min.js' ?>"></script>
@@ -225,7 +210,7 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     </head>
     <body <?php body_class(); ?>>
 	<div class="trigger1"></div>
-    <?php if ($anavaro_specialfb == "on") { ?>
+    <?php if (get_option('anavaro_specialfb') == "on") { ?>
         <div id="fb-root"></div>
         <script>   
         (function(d, s, id) {

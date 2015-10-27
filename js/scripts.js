@@ -55,53 +55,11 @@
 			}
 		});
 	}
-	var current = 0;
-	var carouselTimer = null;
-	function carousel()
-	{
-		carouselTimer = setTimeout(function () {
-			switch (current)
-			{
-				case 0:
-					if (jQuery('#image5').is(':visible'))
-					{
-						jQuery('#image5').slideToggle('slow');
-						jQuery('#image1').slideToggle('slow');
-					}
-					current = 1;
-					console.log(current);
-				break;
-				case 1:
-					jQuery('#image1').slideToggle('slow');
-					jQuery('#image2').slideToggle('slow');
-					current = 2;
-					console.log(current);
-				break;
-				case 2:
-					jQuery('#image2').slideToggle('slow');
-					jQuery('#image3').slideToggle('slow');
-					current = 3;
-					console.log(current);
-				break;
-				case 3:
-					jQuery('#image3').slideToggle('slow');
-					jQuery('#image4').slideToggle('slow');
-					current = 4;
-				break;
-				default:
-					jQuery('#image4').slideToggle('slow');
-					jQuery('#image5').slideToggle('slow');
-					current = 0;
-			}
-			carousel();
-		},10000);
-	}
 	jQuery(document).ready(function($) {
 		waypoint();
 		dropdown();
 		jQuery('.selector').change(function() {
 			window.location = $(this).find("option:selected").val();
 		});
-		carousel();
 	});
 })( jQuery );

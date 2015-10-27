@@ -3,11 +3,17 @@
 	font-weight: bold;
 	color: #293D66;
 }
-#posts .title {
+
+.title {
 	display: block;
 	text-align: center;
 	font-weight: bold;
 	font-size: 16pt;
+}
+#posts  .card .title {
+	display: block;
+	font-weight: bold;
+	font-size: 12pt;
 }
 #posts .excerpt {
 	text-align: justify;
