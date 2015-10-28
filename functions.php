@@ -416,7 +416,9 @@ require get_template_directory() . '/include/customizer.php';
 
 // Do the jQuery right way!!!
 function load_js() {
-
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.js');
+	wp_enqueue_script('waipoint', get_template_directory_uri() . '/js/jquery.waypoints.min.js');
 }
 add_action("wp_enqueue_scripts", "load_js");
 
@@ -428,4 +430,18 @@ function load_css() {
 }
 add_action('wp_enqueue_scripts','load_css');
 
+
+// Let's check for option and then notify admin if there is none set!
+function notify_admin()
+{
+	if (!get_theme_mod('posts_page'))
+	{
+		?>
+		<div class="update-nag">
+        <p><?php _e( 'Warning! You need to set posts page from the theme customization menu', 'anavaro' ); ?></p>
+		</div>
+		<?php
+	}
+}
+add_action( 'admin_notices', 'notify_admin' );
 ?>

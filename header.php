@@ -145,63 +145,11 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
 <!-- End FB Sharing for WP -->
 <?php }
         ?>
-        <script>
-            // Copyright 2006-2007 javascript-array.com
-
-            var timeout    = 500;
-            var closetimer    = 0;
-            var ddmenuitem    = 0;
-
-            // open hidden layer
-            function mopen(id)
-            {    
-                // cancel close timer
-                mcancelclosetime();
-
-                // close old layer
-                if(ddmenuitem) ddmenuitem.style.display = 'none';
-
-                // get new layer and show it
-                ddmenuitem = document.getElementById(id);
-                ddmenuitem.style.display = 'block';
-
-            }
-            // close showed layer
-            function mclose()
-            {
-                if(ddmenuitem) ddmenuitem.style.display = 'none';
-            }
-
-            // go close timer
-            function mclosetime()
-            {
-                closetimer = window.setTimeout(mclose, timeout);
-            }
-
-            // cancel close timer
-            function mcancelclosetime()
-            {
-                if(closetimer)
-                {
-                    window.clearTimeout(closetimer);
-                    closetimer = null;
-                }
-            }
-
-            // close layer when click-out
-            document.onclick = mclose; 
-        </script>
         <?php if (get_option('anavaro_fbadmins') != "n/a") { ?>
         <meta property="fb:admins" content="<?php echo get_option('anavaro_fbadmins'); ?>"/>
         <?php } ?>
         <?php wp_head(); ?>
-		<!--// Add bootstrap //-->
-		<script src="<?php echo get_template_directory_uri() . '/bootstrap/js/bootstrap.js' ?>"></script>
-		<!--// Add aditional JS //-->
-		<script src="<?php echo get_template_directory_uri() . '/js/jquery.waypoints.min.js' ?>"></script>
-		<script src="<?php echo get_template_directory_uri() . '/js/shortcuts/sticky.min.js' ?>"></script>
 		<!--// Styles //-->
-		<!--//<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /> //-->
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/base.css' ?>" type="text/css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/menu.css' ?>" type="text/css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/carousel.css' ?>" type="text/css">

@@ -18,7 +18,7 @@
 							</div>
 							<div class="row">
 								<div class="col-md-12 col-lg-12 center-text author">
-									by <?php the_author_link(); ?>
+									<?php _e('by ', 'anavaro'); the_author_link(); ?>
 								</div>
 							</div>
 							<div class="row">
@@ -33,7 +33,7 @@
 										$posttags = get_the_tags();
 										foreach ($posttags as $tag)
 										{
-											?><li><a href="<?php echo get_tag_link($tag->id); ?>"><?php echo $tag->name; ?></li></a><?php
+											?><li><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></li></a><?php
 										}
 									?>
 									</ul>
@@ -64,7 +64,6 @@
 			<div class="col-md-3 col-lg-3">
 				<?php get_sidebar('right'); ?>
 			</div>
-
 		</div>
 	</div>
 </div>

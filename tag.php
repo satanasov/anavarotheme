@@ -1,26 +1,24 @@
-<?php 
-/**
- * Template Name: Blog page
- *
- * @package WordPress
- * @subpackage Anavaro
- * @since Anavaro 2.0
- */
+<?php
 get_header();
 
-// Let's query some posts
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$tag = get_query_var('tag');
 $args = array(
-	'posts_per_page'	=> 10,
-	'paged' => $paged
+	'paged' => $paged,
+	'tag'	=> $tag
 );
-
-
+$term = get_term_by('slug', $tag, 'post_tag');
 $query = new WP_Query($args);
 ?>
 <div class="container-fluid">
 <div class="wraper" id="posts">
-<div class="row">
+	<div class="row">
+		<div class="center-text section-title">
+			<H1><i class="fa fa-tag"></i> <?php echo $term->name; ?></H1>
+			<p><?php echo $term->description; ?>
+		</div>
+	</div>
+	<div class="row">
 <?php
 if ($query->have_posts())
 {
@@ -97,10 +95,20 @@ if ($query->have_posts())
 		?>
 			<div class="row paginator  center-text">
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<div class="alignleft"><?php next_posts_link('&laquo; По-стари ...', $query->max_num_pages); ?></div>
+					<?php if ($query->max_num_pages > 1) {
+						?>
+						<div class="alignleft"><?php next_posts_link('&laquo; По-стари ...', $query->max_num_pages); ?></div>
+						<?php
+					}
+					?>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<div class="alignright"><?php previous_posts_link('По-нови ... &raquo;'); ?></div>
+					<?php if ($paged != 1) {
+						?>
+						<div class="alignright"><?php previous_posts_link('По-нови ... &raquo;'); ?></div>
+						<?php
+					}
+					?>
 				</div>
 			</div>
 		</div>
@@ -117,10 +125,8 @@ else
 }
 
 ?>
-	
-	<div class="col-md-3 col-lg-3">
-		<?php get_sidebar('right'); ?>
-	</div>
+<div class="col-md-3 col-lg-3">
+	<?php get_sidebar('right'); ?>
 </div>
 </div>
 </div>
