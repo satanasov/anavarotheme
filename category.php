@@ -2,19 +2,19 @@
 get_header();
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$tag = get_query_var('tag');
+$category = get_query_var('cat');
 $args = array(
 	'paged' => $paged,
-	'tag'	=> $tag
+	'cat'	=> $category
 );
-$term = get_term_by('slug', $tag, 'post_tag');
+$term = get_term_by('id', $category, 'category');
 $query = new WP_Query($args);
 ?>
 <div class="container-fluid">
 <div class="wraper" id="posts">
 	<div class="row">
 		<div class="center-text section-title">
-			<H1><i class="fa fa-tag"></i> <?php echo $term->name; ?></H1>
+			<H1><i class="fa fa-folder-open-o"></i> <?php echo $term->name; ?></H1>
 			<p><?php echo $term->description; ?>
 		</div>
 	</div>

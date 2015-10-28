@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * Template Name: Full width (no right sidebar)
+ *
+ * @package WordPress
+ * @subpackage Anavaro
+ * @since Anavaro 2.0
+ */
+get_header();
+?>
 
 <div class="container-fluid">
 	<div class="wraper" id="posts">
@@ -9,8 +18,8 @@
 				{
 					the_post();
 				?>
-					<div class="col-md-9 col-lg-9">
-						<div id="single-post">
+					<div class="">
+						<div id="single-post-full" class="">
 							<div class="row">
 								<div class="col-md-12 col-lg-12">
 									<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
@@ -62,9 +71,6 @@
 				}
 			} 
 			?>
-			<div class="col-md-3 col-lg-3">
-				<?php get_sidebar('right'); ?>
-			</div>
 		</div>
 	</div>
 </div>

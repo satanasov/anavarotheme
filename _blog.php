@@ -97,10 +97,20 @@ if ($query->have_posts())
 		?>
 			<div class="row paginator  center-text">
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<div class="alignleft"><?php next_posts_link('&laquo; По-стари ...', $query->max_num_pages); ?></div>
+					<?php if ($query->max_num_pages > 1 && $paged < $query->max_num_pages) {
+						?>
+						<div class="alignleft"><?php next_posts_link('&laquo; По-стари ...', $query->max_num_pages); ?></div>
+						<?php
+					}
+					?>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<div class="alignright"><?php previous_posts_link('По-нови ... &raquo;'); ?></div>
+					<?php if ($paged != 1) {
+						?>
+						<div class="alignright"><?php previous_posts_link('По-нови ... &raquo;'); ?></div>
+						<?php
+					}
+					?>
 				</div>
 			</div>
 		</div>

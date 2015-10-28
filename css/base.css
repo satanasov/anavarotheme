@@ -89,6 +89,14 @@ a:hover {
 	margin-bottom: 50px;
 }
 
+#posts #single-post-full {
+	margin-top: 10px;
+	margin-left: 25px;
+	margin-right: 25px;
+	background-color: #ffffff;
+}
+
+
 #posts #post-excerpt {
 	margin-top: 5px;
 	padding-left: 35px;
@@ -239,6 +247,9 @@ img.aligncenter {
 	padding-bottom: 15px;
 	padding-top: 15px;
 }
+.section-title p {
+	text-align: center;
+}
 
 .paginator {
 	margin-bottom: 5px;
@@ -262,3 +273,43 @@ img.aligncenter {
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
+
+/**
+* Widget customization
+*/
+.widget_search {
+	
+}
+.widget_search label {
+	width: 70%;
+}
+.widget_search span {
+	display: none;
+}
+.widget_search .search-submit {
+	display: inline;
+	text-shadow: 1px 1px #ddd;
+	background-color: #F2F2EC;
+	box-shadow: inset 0 0 0 1px #ddd;
+	border: none;
+	border-radius: 15px;
+	line-height: 40px;
+	margin-left: 2%;
+	width: 25%;
+}
+
+.widget_search input[type="search"] {
+	margin-top: 10px;
+	padding: 10px;
+	border: solid 1px #dcdcdc;
+	transition: box-shadow 0.3s, border 0.3s;
+	width: 90%;
+}
+.widget_search input[type="search"]:focus,
+.widget_search input[type="search"].focus {
+	border: solid 1px #707070;
+	box-shadow: 0 0 5px 1px #969696;
+}
+
+
+

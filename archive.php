@@ -2,20 +2,36 @@
 get_header();
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$tag = get_query_var('tag');
-$args = array(
-	'paged' => $paged,
-	'tag'	=> $tag
-);
-$term = get_term_by('slug', $tag, 'post_tag');
+$year     = get_query_var('year');
+$monthnum = get_query_var('monthnum');
+
+if ($monthnum > 0)
+{
+	$args = array(
+		'paged' => $paged,
+		'date_query'	=> array(
+			'year'	=> $year,
+			'month'	=> $monthnum
+		)
+	);
+}
+else
+{
+	$args = array(
+		'paged' => $paged,
+		'date_query'	=> array(
+			'year'	=> $year
+		)
+	);
+}
+$term = get_term_by('id', $category, 'category');
 $query = new WP_Query($args);
 ?>
 <div class="container-fluid">
 <div class="wraper" id="posts">
 	<div class="row">
 		<div class="center-text section-title">
-			<H1><i class="fa fa-tag"></i> <?php echo $term->name; ?></H1>
-			<p><?php echo $term->description; ?>
+			<H1><i class="fa fa-calendar"></i> <?php $title = $monthnum > 0 ? single_month_title(' ') : $year; echo $title; ?></H1>
 		</div>
 	</div>
 	<div class="row">

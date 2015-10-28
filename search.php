@@ -1,36 +1,26 @@
 <?php
 get_header();
-
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$tag = get_query_var('tag');
-$args = array(
-	'paged' => $paged,
-	'tag'	=> $tag
-);
-$term = get_term_by('slug', $tag, 'post_tag');
-$query = new WP_Query($args);
 ?>
 <div class="container-fluid">
 <div class="wraper" id="posts">
 	<div class="row">
 		<div class="center-text section-title">
-			<H1><i class="fa fa-tag"></i> <?php echo $term->name; ?></H1>
-			<p><?php echo $term->description; ?>
+			<H1><i class="fa fa-search"></i> <?php echo $s; ?></H1>
 		</div>
 	</div>
 	<div class="row">
 <?php
-if ($query->have_posts())
+if (have_posts())
 {
 	?>
 			<div class="col-md-9 col-lg-9">
 		<?php
-		while ($query->have_posts())
+		while (have_posts())
 		{
 			?>
 				<div id="single-post">
 				<?php
-				$query->the_post();
+				the_post();
 				//print_r(the_ID());
 				if (has_post_thumbnail())
 				{
@@ -95,12 +85,7 @@ if ($query->have_posts())
 		?>
 			<div class="row paginator  center-text">
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<?php if ($query->max_num_pages > 1 && $paged < $query->max_num_pages) {
-						?>
-						<div class="alignleft"><?php next_posts_link('&laquo; По-стари ...', $query->max_num_pages); ?></div>
-						<?php
-					}
-					?>
+						<div class="alignleft"><?php next_posts_link('&laquo; По-стари ...'); ?></div>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<?php if ($paged != 1) {
