@@ -52,7 +52,7 @@ if ($query->have_posts())
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-lg-12 center-text author">
-						<?php _e('by ', 'anavaro'); the_author_link(); ?>
+						<?php _e('by ', 'anavaro'); if (the_author_meta('user_url') != '') { the_author_link(); } else { the_author_posts_link(); } ?>
 					</div>
 				</div>
 				<div class="row">
@@ -103,7 +103,7 @@ if ($query->have_posts())
 					?>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<?php if ($paged != 1) {
+					<?php if ($paged > 1) {
 						?>
 						<div class="alignright"><?php previous_posts_link('По-нови ... &raquo;'); ?></div>
 						<?php

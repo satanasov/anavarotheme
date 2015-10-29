@@ -1,36 +1,53 @@
-<?php
+<?php 
 get_header();
 
+// Let's query some posts
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$tag = get_query_var('tag');
-$args = array(
-	'paged' => $paged,
-	'tag'	=> $tag
+$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+$vars = array(
+	'class' => 'img-circle center-block'
 );
-$term = get_term_by('slug', $tag, 'post_tag');
-$query = new WP_Query($args);
+
 ?>
+
+
 <div class="container-fluid">
 <div class="wraper" id="posts">
-	<div class="row">
-		<div class="center-text section-title">
-			<H1><i class="fa fa-tag"></i> <?php echo $term->name; ?></H1>
-			<p><?php echo $term->description; ?>
-		</div>
-	</div>
-	<div class="row">
+<div class="row">
 <?php
-if ($query->have_posts())
+if (have_posts())
 {
 	?>
-			<div class="col-md-9 col-lg-9">
+		<div class="col-md-9 col-lg-9">
+			<div id="single-post">
+				<div class="row">
+					<div class="col-md-12 col-lg-12 ">
+						<?php echo get_avatar(intval($author), 128, "", $curauth->display_name, $vars) ?>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-lg-12 author">
+						<h1><?php if ($curauth->user_url) { the_author_link(); } else { echo $curauth->display_name; } ?></h1>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-12 col-lg-12">
+						<i class="fa fa-hourglass"></i> <?php echo date("d M Y", strtotime($curauth->user_registered)); ?>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-12 col-lg-12">
+						<?php echo get_the_author_meta( 'description', intval($author) ); ?>
+					</div>
+				</div>
+			</div>
 		<?php
-		while ($query->have_posts())
+		while (have_posts())
 		{
 			?>
 				<div id="single-post">
 				<?php
-				$query->the_post();
+				the_post();
 				//print_r(the_ID());
 				if (has_post_thumbnail())
 				{
@@ -125,8 +142,10 @@ else
 }
 
 ?>
-<div class="col-md-3 col-lg-3">
-	<?php get_sidebar('right'); ?>
+	
+	<div class="col-md-3 col-lg-3">
+		<?php get_sidebar('right'); ?>
+	</div>
 </div>
 </div>
 </div>

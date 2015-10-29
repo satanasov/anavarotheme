@@ -444,4 +444,85 @@ function notify_admin()
 	}
 }
 add_action( 'admin_notices', 'notify_admin' );
+
+// Let's do some checks
+add_action('admin_init','my_meta_init');
+
+function my_meta_init()
+{
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+
+	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
+
+	// check for a template type
+	if ($template_file == '_info.php')
+	{
+		add_meta_box('my_meta_setup_2', 'Add projects', 'my_meta_setup_2', 'page', 'normal', 'high');
+	}
+}
+add_action('save_post','my_meta_save');
+function my_meta_setup_2() {
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+	echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+	echo '<table class="form-table">';
+	echo '<tr><th style="width:20%"><label for="project">Project</label></th><th>Project description</th></tr>';
+	$projects = get_post_meta($post_id, 'project', true);
+	$counter = 0;
+	if ($projects)
+	{
+		foreach ($projects as $project)
+		{
+			echo '<tr><td><label for="projectname">Project name</label><br><input type="text" id="project[' . $counter . '][name]" name="project[' . $counter . '][name]" value="' . $project['name'] .'"><br><label for="projecturl">Project URL</label><br><input type="url" id="project[' . $counter . '][url]" name="project[' . $counter . '][url]" value="' . $project['url'] .'"></td><td><label for="projectdesc">Project Description<br/></label><textarea name="project[' . $counter . '][desc]" id="project[' . $counter . '][desc]" value="" cols="90" rows="3"/>' . $project['desc'] .'</textarea></td></tr>';
+			$counter++;
+		}
+	}
+	else
+	{
+		echo '<tr><td><label for="projectname">Project name</label><br><input type="text" id="project[0][name]" name="project[0][name]"><br><label for="projecturl">Project URL</label><br><input type="url" id="project[0][url]" name="project[0][url]"></td><td><label for="projectdesc">Project Description<br/></label><textarea name="project[0][desc]" id="project[0][desc]" value="" cols="90" rows="3"/></textarea></td></tr>';
+	}
+	echo '</table>';
+	echo '<button class="elementadd">Add new project</button>';
+    ?>
+	<script>
+		counter = <?php echo $counter; ?>;
+		jQuery('.elementadd').click(function( event ) {
+			event.preventDefault();
+			jQuery('.form-table').append('<tr><td><label for="projectname">Project name</label><br><input type="text" id="project[' + ( counter + 1) + '][name]" name="project[' + ( counter + 1) + '][name]"><br><label for="projecturl">Project URL</label><br><input type="url" id="project[' + ( counter + 1) + '][url]" name="project[' + ( counter + 1) + '][url]"></td><td><label for="projectdesc">Project Description<br/><textarea name="project[' + ( counter + 1) + '][desc]" id="project[' + ( counter + 1) + '][desc]" value=""  cols="90" rows="3"/></textarea></td></tr>');
+			counter++;
+	});
+	</script>
+	<?php
+}
+function my_meta_save($post_id) {
+	if (!wp_verify_nonce($_POST['mytheme_meta_box_nonce'], basename(__FILE__)))
+	{
+		return $post_id;
+	}
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+	{
+		return $post_id;
+	}
+	if ('page' == $_POST['post_type'])
+	{
+		if (!current_user_can('edit_page', $post_id))
+		{
+			return $post_id;
+		}
+	}
+	elseif (!current_user_can('edit_post', $post_id))
+	{
+		return $post_id;
+	}
+	$projects = $_POST['project'];
+
+	foreach ($projects as $ID => $project)
+	{
+
+		if ($project['name'] == '' && $project['url'] == '' && $project['desc'] == '')
+		{
+			unset($projects[$ID]);
+		}
+	}
+	update_post_meta($post_id, 'project', $projects);
+}
 ?>

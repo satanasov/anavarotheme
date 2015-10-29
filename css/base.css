@@ -81,7 +81,10 @@ a:hover {
 	margin-left: 25px;
 	text-align: center;
 }
-
+#posts .author h1 {
+	margin-left: 0px;
+	text-align: center;
+}
 #posts #single-post {
 	margin-top: 10px;
 	margin-left: 10px;
