@@ -150,11 +150,16 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
         <?php } ?>
         <?php wp_head(); ?>
 		<!--// Styles //-->
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/base.css' ?>" type="text/css">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/menu.css' ?>" type="text/css">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/carousel.css' ?>" type="text/css">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/posts.css' ?>" type="text/css">
-		
+		<script>
+			function writeMail(n1, n2)
+			{
+				var name = n1;
+				var sign = '@';
+				var dom = n2;
+				document.write("<a href=\"mailto:" + name + sign + dom + "\">" + name + sign + dom + "</a>");
+
+			}
+		</script>
     </head>
     <body <?php body_class(); ?>>
 	<div class="trigger1"></div>

@@ -1,0 +1,110 @@
+/*
+* This is CSS for info pages
+*/
+
+/*
+* Main info
+* This should take care for the first part of the info page
+* (where the picture, name, contacts and presentation is)
+*/
+
+.info-main {
+	margin: 10px 0 0 0;
+}
+
+.info-main .info-image {
+	padding-top: 15px;
+}
+
+.info-main .info-image img{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 100%;
+}
+
+.info-main .info-main-info {
+	padding-right: 15px;
+}
+
+.info-main .info-main-info .main-contacts {
+	padding-left: 25px;
+}
+
+.info-main .info-main-info .secondary-contacts {
+	padding-left: 25px;
+}
+
+.info-main .info-main-info .personal {
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: justify;
+}
+
+.info-main .info-main-info .personal h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.info-main .info-main-info .personal p:first-letter {
+	margin-left: 10px;
+}
+
+/*
+* Projects
+* This should take care for the second part of the info page
+* (where the projects are)
+*/
+
+.projects h1 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+
+.projects .project {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 20px;
+}
+
+
+.projects .project .project-name {
+	text-align: center;
+	font-size: 15pt;
+}
+
+/*
+* Jobs
+* This should take care for the thord part of the info page
+* (where the jobs are)
+*/
+.work h1 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+
+.work .job {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 20px;
+}
+
+.work .job .job-period {
+	text-align: center;
+	font-size: 15pt;
+	font-weight: bold;
+	color: #337AB7;
+}
+.work .job  .job-info	{
+	
+}
+.work .job  .job-info	h3{
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #337AB7;
+}
+.work .job  .job-info	h4{
+	margin-top: 0;
+	color: #337AB7;
+}

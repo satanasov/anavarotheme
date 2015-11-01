@@ -1,5 +1,5 @@
 /*
-	Base CSS
+* Base CSS
 */
 
 a {
@@ -36,6 +36,10 @@ a:hover {
 
 .splitter {
 	height: 100px;
+}
+
+.half-splitter {
+	height: 50px;
 }
 
 #badges .icon {
@@ -84,6 +88,9 @@ a:hover {
 #posts .author h1 {
 	margin-left: 0px;
 	text-align: center;
+}
+.nomargin {
+	margin: 0px;
 }
 #posts #single-post {
 	margin-top: 10px;

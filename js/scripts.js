@@ -1,4 +1,4 @@
-(function($) {			
+(function($) {
 	// Let's make the small menus
 	function dropdown()
 	{

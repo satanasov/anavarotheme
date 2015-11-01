@@ -42,7 +42,7 @@ if (have_posts())
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-lg-12 center-text author">
-						<?php _e('by ', 'anavaro'); if (the_author_meta('user_url') != '') { the_author_link(); } else { the_author_posts_link(); } ?>
+						<?php _e('by ', 'anavaro'); if (get_the_author_meta('user_url') != '') { the_author_link(); } else { the_author_posts_link(); } ?>
 					</div>
 				</div>
 				<div class="row">

@@ -4,8 +4,9 @@
 		<div class="row">
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 				<div id="sidebar-bottom-copirght">
-					<p>Тази тема е разработена за <a href="http://www.anavaro.com/" target="_self">anavaro.com</a> от Lucifer с огромната помощ на <a href="http://twitter.com/web_enthusast" target="_new">@web_enthusast</a></p>
-					<p>Последна ревизия 0.22 на 15.06.2012 г.</p>
+					<img src="<?php echo get_template_directory_uri(); ?>/img/gerb143alpha.png" class="image-responsive center-block">
+					<p>Тази тема е разработена за <a href="http://www.anavaro.com/" target="_self">anavaro.com</a> от Lucifer с огромната помощ на Nick Panov</p>
+					<p>Последна ревизия 2.00 на 01.11.2015 г.</p>
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
