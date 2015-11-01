@@ -18,6 +18,8 @@ Custom user info page with support of info, pucture, projects and job history (t
 
 Using font awsome for most of the images (get lower bandwith).
 
+Admin page allowing to add Google Analytics, Facebook API, Twitter API, Google+ ... A lot of ``<head>`` stuff.
+
 ## Specifics:
 You will need to create a page with Blog template and configure it in theme customization.
 
@@ -29,6 +31,12 @@ Fix the lame ass selector on 3 featured template
 I sure need to optimize some script loading.
 
 I need to lower the db requests (WordPress is not so optimized ...)
+## Install
+```git clone https://github.com/satanasov/anavarotheme.git anavaro```
+
+Activate from admin panel.
+
+Configure from Anvaro settings.
 
 ## Support
 You could open issues and PRs in the github repo and I will open a new subforum in my laboratory forum for other issues.
