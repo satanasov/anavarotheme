@@ -1,0 +1,291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-11-02 02:20+0200\n"
+"PO-Revision-Date: 2015-11-02 02:32+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ../Desktop/anavaro\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: _blog.php:56 _fullwidth.php:30 archive.php:71 author.php:72 category.php:55
+#: page.php:21 search.php:45 single-info.php:174 single.php:21 tag.php:55
+msgid "by "
+msgstr "от "
+
+#: _blog.php:66 archive.php:81 author.php:82 category.php:65 search.php:55
+#: tag.php:65
+msgid "Read more ..."
+msgstr "Прочети още ..."
+
+#: functions.php:393
+msgid "Menu 1"
+msgstr ""
+
+#: functions.php:448
+msgid "Warning! You need to set posts page from the theme customization menu"
+msgstr ""
+
+#: include/3colfeat.php:11
+msgid "3 Column feaured"
+msgstr ""
+
+#: include/3colfeat.php:14
+msgid ""
+"This will allow you to set text and icons for the 3 column fetured under the "
+"carousel. To select icons go to <a href=\"https://fortawesome.github.io/Font-"
+"Awesome/icons/\">Font Awsome homepage</a> and copy the icon name. I promise "
+"to create some kind of selector in the future."
+msgstr ""
+
+#: include/3colfeat.php:29
+msgid "Use 3 column featured"
+msgstr ""
+
+#: include/carousel.php:10
+msgid "Carousel options"
+msgstr ""
+
+#: include/carousel.php:13
+msgid ""
+"Change front page carousel. If you want to disable any image - just leave "
+"the address empty. If you are going to use carousel you need to have at "
+"least first image"
+msgstr ""
+
+#: include/carousel.php:28
+msgid "Use carousel"
+msgstr ""
+
+#: include/carousel.php:46
+msgid "First image:"
+msgstr ""
+
+#: include/carousel.php:47
+msgid ""
+"What image should we use for first carousel slide? <br /> Best used "
+"resolution 1200x575"
+msgstr ""
+
+#: include/carousel.php:66
+msgid "First image text:"
+msgstr ""
+
+#: include/carousel.php:67
+msgid "What should be the text over image one?"
+msgstr ""
+
+#: include/carousel.php:85
+msgid "First image text position:"
+msgstr ""
+
+#: include/carousel.php:109
+msgid "First image text url:"
+msgstr ""
+
+#: include/carousel.php:110 include/carousel.php:191 include/carousel.php:272
+#: include/carousel.php:353 include/carousel.php:434
+msgid "Where should the text lead to (leave empty for no URL)"
+msgstr ""
+
+#: include/carousel.php:128
+msgid "Second image:"
+msgstr ""
+
+#: include/carousel.php:129
+msgid ""
+"What image should we use for second carousel slide? <br /> Best used "
+"resolution 1200x575"
+msgstr ""
+
+#: include/carousel.php:147
+msgid "Second image text:"
+msgstr ""
+
+#: include/carousel.php:148
+msgid "What should be the text over image two?"
+msgstr ""
+
+#: include/carousel.php:166
+msgid "Second image text position:"
+msgstr ""
+
+#: include/carousel.php:190
+msgid "Second image text url:"
+msgstr ""
+
+#: include/carousel.php:209
+msgid "Third image:"
+msgstr ""
+
+#: include/carousel.php:210
+msgid ""
+"What image should we use for third carousel slide? <br /> Best used "
+"resolution 1200x575"
+msgstr ""
+
+#: include/carousel.php:228
+msgid "Third image text:"
+msgstr ""
+
+#: include/carousel.php:229
+msgid "What should be the text over image three?"
+msgstr ""
+
+#: include/carousel.php:247
+msgid "Third image text position:"
+msgstr ""
+
+#: include/carousel.php:271
+msgid "Third image text url:"
+msgstr ""
+
+#: include/carousel.php:290
+msgid "Fourth image:"
+msgstr ""
+
+#: include/carousel.php:291
+msgid ""
+"What image should we use for fourth carousel slide? <br /> Best used "
+"resolution 1200x575"
+msgstr ""
+
+#: include/carousel.php:309
+msgid "Fourth image text:"
+msgstr ""
+
+#: include/carousel.php:310
+msgid "What should be the text over image four?"
+msgstr ""
+
+#: include/carousel.php:328
+msgid "Fourth image text position:"
+msgstr ""
+
+#: include/carousel.php:352
+msgid "Fourth image text url:"
+msgstr ""
+
+#: include/carousel.php:371
+msgid "Fifth image:"
+msgstr ""
+
+#: include/carousel.php:372
+msgid ""
+"What image should we use for fifth carousel slide? <br /> Best used "
+"resolution 1200x575"
+msgstr ""
+
+#: include/carousel.php:390
+msgid "Fifth image text:"
+msgstr ""
+
+#: include/carousel.php:391
+msgid "What should be the text over image five?"
+msgstr ""
+
+#: include/carousel.php:409
+msgid "Fifth image text position:"
+msgstr ""
+
+#: include/carousel.php:433
+msgid "Fifth image text url:"
+msgstr ""
+
+#: include/meta_boxes.php:7
+msgid "Add user title"
+msgstr ""
+
+#: include/meta_boxes.php:8
+msgid "Add user primary contacts"
+msgstr ""
+
+#: include/meta_boxes.php:9
+msgid "Add user secondary contacts"
+msgstr ""
+
+#: include/meta_boxes.php:10
+msgid "Add projects"
+msgstr ""
+
+#: include/meta_boxes.php:11
+msgid "Add work"
+msgstr ""
+
+#: include/meta_boxes.php:34
+msgid ""
+"Extra field for URL is the visualisation and for Mail - the GPG public key "
+"link"
+msgstr ""
+
+#: include/meta_boxes.php:152
+msgid "Project description supports <i>HTML</i>"
+msgstr ""
+
+#: include/meta_boxes.php:189
+msgid ""
+"Date fields are normal text fields.<br />Description supports <i>HTML</i>"
+msgstr ""
+
+#: include/meta_boxes.php:198 include/meta_boxes.php:219
+#: include/meta_boxes.php:243
+msgid "Start date"
+msgstr ""
+
+#: include/meta_boxes.php:200 include/meta_boxes.php:221
+#: include/meta_boxes.php:245
+msgid "End date"
+msgstr ""
+
+#: include/meta_boxes.php:204 include/meta_boxes.php:225
+#: include/meta_boxes.php:249
+msgid "Position"
+msgstr ""
+
+#: include/meta_boxes.php:206 include/meta_boxes.php:227
+#: include/meta_boxes.php:251
+msgid "Company name"
+msgstr ""
+
+#: include/meta_boxes.php:208 include/meta_boxes.php:229
+#: include/meta_boxes.php:253
+msgid "Job Description"
+msgstr ""
+
+#: include/settings.php:10
+msgid "Base theme settings"
+msgstr ""
+
+#: include/settings.php:13
+msgid "Some base theme settings."
+msgstr ""
+
+#: include/settings.php:28
+msgid "Posts page"
+msgstr ""
+
+#: include/settings.php:31
+msgid ""
+"Which page is using Blog template? Pease create a new one if you don't have "
+"one!"
+msgstr ""
+
+#: single-info.php:86
+msgid "Few words"
+msgstr "Няколко думи"
+
+#: single-info.php:97
+msgid "Projects"
+msgstr "Проекти"
+
+#: single-info.php:124
+msgid "Jobs and technical qualifications"
+msgstr "Стаж и технически квалификации"
