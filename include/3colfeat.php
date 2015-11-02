@@ -94,7 +94,7 @@ function anavaro_customize_feature($wp_customize) {
 	
 	$wp_customize->add_setting('feature_second_text',
 		array(
-			'sanitize_callback' => 'sanitize_text_field',
+			'sanitize_callback' => 'esc_html',
 			'default' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit tristique maximus. Nunc vitae aliquam magna. Curabitur elementum blandit sem, ac tincidunt est. Suspendisse interdum sodales tincidunt. Etiam commodo porttitor tortor, et porttitor metus vestibulum ac. Maecenas scelerisque tortor quis nisl vehicula, et venenatis dolor commodo. Donec lacinia, lorem id ultrices feugiat, tortor sapien luctus leo, ut cursus enim nunc ac nisi. Donec magna dui, vestibulum et viverra ac, pulvinar ac felis. Pellentesque rutrum lacinia dictum.'
 		)
 	);
@@ -106,7 +106,7 @@ function anavaro_customize_feature($wp_customize) {
 				'label'	=> 'Select second text',
 				'type'           => 'textarea',
 				'section'	=> 'anavaro_feature_options',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'esc_html',
 			)
 		)
 	);
@@ -133,7 +133,7 @@ function anavaro_customize_feature($wp_customize) {
 	
 	$wp_customize->add_setting('feature_third_text',
 		array(
-			'sanitize_callback' => 'sanitize_text_field',
+			'sanitize_callback' => 'esc_html',
 			'default' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit tristique maximus. Nunc vitae aliquam magna. Curabitur elementum blandit sem, ac tincidunt est. Suspendisse interdum sodales tincidunt. Etiam commodo porttitor tortor, et porttitor metus vestibulum ac. Maecenas scelerisque tortor quis nisl vehicula, et venenatis dolor commodo. Donec lacinia, lorem id ultrices feugiat, tortor sapien luctus leo, ut cursus enim nunc ac nisi. Donec magna dui, vestibulum et viverra ac, pulvinar ac felis. Pellentesque rutrum lacinia dictum.'
 		)
 	);
@@ -145,7 +145,7 @@ function anavaro_customize_feature($wp_customize) {
 				'label'	=> 'Select third text',
 				'type'           => 'textarea',
 				'section'	=> 'anavaro_feature_options',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'esc_html',
 			)
 		)
 	);
