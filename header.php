@@ -100,7 +100,8 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
             <?php }
               
     //Add special Facebook options for posts
-    if (get_option('anavaro_specialfb') == "on") { ?>
+	// Disable Header FB optimization for the moment!
+    if (get_option('anavaro_specialfb') == "don") { ?>
     <!-- Begin FB Sharing for WP by Chad Von Lind. Get the latest code here: http://vonlind.com/?p=539  -->
 <?php
     if(is_single() || is_page()) {
