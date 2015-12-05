@@ -29,3 +29,7 @@
 #posts .card {
 	height: 640px;
 }
+
+blockquote {
+	overflow-x: auto;
+}
