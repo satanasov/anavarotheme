@@ -1,0 +1,12 @@
+01.10.2015
+= INITIAL RELEASE
+
+13.10.2015
+- Remove FB support as it is supported by JetPack
+
+05.12.2015
+= Fix Blockquote tag
+
+10.12.2015
+= Fix white spaces after new post. Now showing 4 instead of 5 new posts
++ Add CHANGELOG.txt
