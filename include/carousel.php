@@ -114,6 +114,41 @@ function anavaro_customize_carousel($wp_customize) {
 			)
 		)
 	);
+	// First image text colour
+	$wp_customize->add_setting( 'carousel_first_slide_text_colour',
+		array(
+			'default' => '#337AB7'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_first_slide_text_colour',
+			array(
+				'label'          => __( 'First image text colour:', 'anavaro' ),
+				'description' => __( 'What should the text colour be', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+			)
+		)
+	);
+	
+	// First image text colour hover
+	$wp_customize->add_setting( 'carousel_first_slide_text_colour_hover',
+		array(
+			'default' => '#23527c'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_first_slide_text_colour_hover',
+			array(
+				'label'          => __( 'First image text colour on hover:', 'anavaro' ),
+				'description' => __( 'What should the text colour be on hover', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+			)
+		)
+	);
 	// Second image control
 	$wp_customize->add_setting( 'carousel_second_slide_image',
 		array(
@@ -192,6 +227,41 @@ function anavaro_customize_carousel($wp_customize) {
 				'section'        => 'anavaro_carousel_options',
 				'type'           => 'url',
 				'sanitize_callback' => 'esc_url_raw',
+			)
+		)
+	);
+	// Second image text colour
+	$wp_customize->add_setting( 'carousel_second_slide_text_colour',
+		array(
+			'default' => '#337AB7'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_second_slide_text_colour',
+			array(
+				'label'          => __( 'Second image text colour:', 'anavaro' ),
+				'description' => __( 'What should the text colour be', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+			)
+		)
+	);
+	
+	// Second image text colour hover
+	$wp_customize->add_setting( 'carousel_second_slide_text_colour_hover',
+		array(
+			'default' => '#23527c'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_second_slide_text_colour_hover',
+			array(
+				'label'          => __( 'Second image text colour on hover:', 'anavaro' ),
+				'description' => __( 'What should the text colour be on hover', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
 			)
 		)
 	);
@@ -276,6 +346,41 @@ function anavaro_customize_carousel($wp_customize) {
 			)
 		)
 	);
+	// Third image text colour
+	$wp_customize->add_setting( 'carousel_third_slide_text_colour',
+		array(
+			'default' => '#337AB7'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_third_slide_text_colour',
+			array(
+				'label'          => __( 'Third image text colour:', 'anavaro' ),
+				'description' => __( 'What should the text colour be', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+			)
+		)
+	);
+	
+	// Third image text colour hover
+	$wp_customize->add_setting( 'carousel_third_slide_text_colour_hover',
+		array(
+			'default' => '#23527c'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_third_slide_text_colour_hover',
+			array(
+				'label'          => __( 'Third image text colour on hover:', 'anavaro' ),
+				'description' => __( 'What should the text colour be on hover', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+			)
+		)
+	);
 	// Fourth image control
 	$wp_customize->add_setting( 'carousel_fourth_slide_image',
 		array(
@@ -357,6 +462,41 @@ function anavaro_customize_carousel($wp_customize) {
 			)
 		)
 	);
+	// Fourth image text colour
+	$wp_customize->add_setting( 'carousel_fourth_slide_text_colour',
+		array(
+			'default' => '#337AB7'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_fourth_slide_text_colour',
+			array(
+				'label'          => __( 'Fourth image text colour:', 'anavaro' ),
+				'description' => __( 'What should the text colour be', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+			)
+		)
+	);
+	
+	// Fourth image text colour hover
+	$wp_customize->add_setting( 'carousel_fourth_slide_text_colour_hover',
+		array(
+			'default' => '#23527c'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_fourth_slide_text_colour_hover',
+			array(
+				'label'          => __( 'Fourth image text colour on hover:', 'anavaro' ),
+				'description' => __( 'What should the text colour be on hover', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+			)
+		)
+	);
 	// Fifth image control
 	$wp_customize->add_setting( 'carousel_fifth_slide_image',
 		array(
@@ -435,6 +575,41 @@ function anavaro_customize_carousel($wp_customize) {
 				'section'        => 'anavaro_carousel_options',
 				'type'           => 'url',
 				'sanitize_callback' => 'esc_url_raw',
+			)
+		)
+	);
+	// Fifth image text colour
+	$wp_customize->add_setting( 'carousel_fifth_slide_text_colour',
+		array(
+			'default' => '#337AB7'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_fifth_slide_text_colour',
+			array(
+				'label'          => __( 'Fifth image text colour:', 'anavaro' ),
+				'description' => __( 'What should the text colour be', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
+			)
+		)
+	);
+	
+	// Fifth image text colour hover
+	$wp_customize->add_setting( 'carousel_fifth_slide_text_colour_hover',
+		array(
+			'default' => '#23527c'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'carousel_fifth_slide_text_colour_hover',
+			array(
+				'label'          => __( 'Fifth image text colour on hover:', 'anavaro' ),
+				'description' => __( 'What should the text colour be on hover', 'anavaro' ),
+				'section'        => 'anavaro_carousel_options',
 			)
 		)
 	);

@@ -11,23 +11,70 @@
 			$carousel_first_text = get_theme_mod('carousel_first_slide_text', 'Lorem ipsum dolor sit amet amet.');
 			$carousel_first_text_pos = get_theme_mod('carousel_first_slide_text_pos', 'center');
 			$carousel_first_text_url = get_theme_mod('carousel_first_slide_text_url', '#');
+			$carousel_first_text_colour = get_theme_mod('carousel_first_slide_text_colour', '#337AB7');
+			$carousel_first_text_colour_hover = get_theme_mod('carousel_first_slide_text_colour_hover', '#23527c');
 			$carousel_second = get_theme_mod('carousel_second_slide_image', get_template_directory_uri() . '/img/18046343975_65c2031027_k.jpg');
 			$carousel_second_text = get_theme_mod('carousel_second_slide_text', 'Lorem ipsum dolor sit amet amet.');
 			$carousel_second_text_pos = get_theme_mod('carousel_second_slide_text_pos', 'center');
 			$carousel_second_text_url = get_theme_mod('carousel_second_slide_text_url', '#');
+			$carousel_second_text_colour = get_theme_mod('carousel_second_slide_text_colour', '#337AB7');
+			$carousel_second_text_colour_hover = get_theme_mod('carousel_second_slide_text_colour_hover', '#23527c');
 			$carousel_third = get_theme_mod('carousel_third_slide_image', get_template_directory_uri() . '/img/8499155449_1235a88784_k.jpg');
 			$carousel_third_text = get_theme_mod('carousel_third_slide_text', 'Lorem ipsum dolor sit amet amet.');
 			$carousel_third_text_pos = get_theme_mod('carousel_third_slide_text_pos', 'center');
 			$carousel_third_text_url = get_theme_mod('carousel_third_slide_text_url', '#');
+			$carousel_third_text_colour = get_theme_mod('carousel_third_slide_text_colour', '#337AB7');
+			$carousel_third_text_colour_hover = get_theme_mod('carousel_third_slide_text_colour_hover', '#23527c');
 			$carousel_fourth = get_theme_mod('carousel_fourth_slide_image', '');
 			$carousel_fourth_text = get_theme_mod('carousel_fourth_slide_text', '');
 			$carousel_fourth_text_pos = get_theme_mod('carousel_fourth_slide_text_pos', 'center');
 			$carousel_fourth_text_url = get_theme_mod('carousel_fourth_slide_text_url', '#');
+			$carousel_fourth_text_colour = get_theme_mod('carousel_fourth_slide_text_colour', '#337AB7');
+			$carousel_fourth_text_colour_hover = get_theme_mod('carousel_fourth_slide_text_colour_hover', '#23527c');
 			$carousel_fifth = get_theme_mod('carousel_fifth_slide_image', '');
 			$carousel_fifth_text = get_theme_mod('carousel_fifth_slide_text', '');
 			$carousel_fifth_text_pos = get_theme_mod('carousel_fifth_slide_text_pos', 'center');
 			$carousel_fifth_text_url = get_theme_mod('carousel_fifth_slide_text_url', '#');
+			$carousel_fifth_text_colour = get_theme_mod('carousel_fifth_slide_text_colour', '#337AB7');
+			$carousel_fifth_text_colour_hover = get_theme_mod('carousel_fifth_slide_text_colour_hover', '#23527c');
 	?>
+	<style>
+		.carousel_first {
+			color: <?php echo $carousel_first_text_colour ?>;
+		}
+		.carousel_first:hover {
+			color: <?php echo $carousel_first_text_colour_hover ?>;
+			text-decoration: none;
+		}
+		.carousel_second {
+			color: <?php echo $carousel_second_text_colour ?>;
+		}
+		.carousel_second:hover {
+			color: <?php echo $carousel_second_text_colour_hover ?>;
+			text-decoration: none;
+		}
+		.carousel_third {
+			color: <?php echo $carousel_third_text_colour ?>;
+		}
+		.carousel_third:hover {
+			color: <?php echo $carousel_third_text_colour_hover ?>;
+			text-decoration: none;
+		}
+		.carousel_fourth {
+			color: <?php echo $carousel_fourth_text_colour ?>;
+		}
+		.carousel_fourth:hover {
+			color: <?php echo $carousel_fourth_text_colour_hover ?>;
+			text-decoration: none;
+		}
+		.carousel_fifth {
+			color: <?php echo $carousel_fifth_text_colour ?>;
+		}
+		.carousel_fifth:hover {
+			color: <?php echo $carousel_fifth_text_colour_hover ?>;
+			text-decoration: none;
+		}
+	</style>
 	
 	<div class="row">
 		<div class="no-padding col-lg-12 col-md-12 col-sm-12 col-xs-12" >
@@ -58,7 +105,7 @@
 						<img src="<?php echo $carousel_first; ?>" class="img-responsive">
 						<?php if ($carousel_first_text) { ?>
 						<div class="carousel-caption">
-							<h1 style="text-align: <?php echo $carousel_first_text_pos ?>;"><?php if($carousel_first_text_url) { echo '<a href="' . $carousel_first_text_url . '">'; } ?><?php echo $carousel_first_text ?><?php if($carousel_first_text_url) { echo '</a>'; } ?></h1>
+							<h1 style="text-align: <?php echo $carousel_first_text_pos ?>;"><?php if($carousel_first_text_url) { echo '<a class="carousel_first" href="' . $carousel_first_text_url . '">'; } ?><?php echo $carousel_first_text ?><?php if($carousel_first_text_url) { echo '</a>'; } ?></h1>
 						</div>
 						<?php } ?>
 					</div>
@@ -69,7 +116,7 @@
 						<img src="<?php echo $carousel_second; ?>" class="img-responsive">
 						<?php if ($carousel_second_text) { ?>
 						<div class="carousel-caption">
-							<h1 style="text-align: <?php echo $carousel_second_text_pos ?>;"><?php if($carousel_second_text_url) { echo '<a href="' . $carousel_second_text_url . '">'; } ?><?php echo $carousel_second_text ?><?php if($carousel_second_text_url) { echo '</a>'; } ?></h1>
+							<h1 style="text-align: <?php echo $carousel_second_text_pos ?>;"><?php if($carousel_second_text_url) { echo '<a class="carousel_second" href="' . $carousel_second_text_url . '">'; } ?><?php echo $carousel_second_text ?><?php if($carousel_second_text_url) { echo '</a>'; } ?></h1>
 						</div>
 						<?php } ?>
 					</div>
@@ -79,7 +126,7 @@
 						<img src="<?php echo $carousel_third; ?>" class="img-responsive">
 						<?php if ($carousel_third_text) { ?>
 						<div class="carousel-caption">
-							<h1 style="text-align: <?php echo $carousel_third_text_pos ?>;"><?php if($carousel_third_text_url) { echo '<a href="' . $carousel_third_text_url . '">'; } ?><?php echo $carousel_third_text ?><?php if($carousel_third_text_url) { echo '</a>'; } ?></h1>
+							<h1 style="text-align: <?php echo $carousel_third_text_pos ?>;"><?php if($carousel_third_text_url) { echo '<a class="carousel_third" href="' . $carousel_third_text_url . '">'; } ?><?php echo $carousel_third_text ?><?php if($carousel_third_text_url) { echo '</a>'; } ?></h1>
 						</div>
 						<?php } ?>
 					</div>
@@ -89,7 +136,7 @@
 						<img src="<?php echo $carousel_fourth; ?>" class="img-responsive">
 						<?php if ($carousel_fourth_text) { ?>
 						<div class="carousel-caption">
-							<h1 style="text-align: <?php echo $carousel_fourth_text_pos ?>;"><?php if($carousel_fourth_text_url) { echo '<a href="' . $carousel_fourth_text_url . '">'; } ?><?php echo $carousel_fourth_text ?><?php if($carousel_fourth_text_url) { echo '</a>'; } ?></h1>
+							<h1 style="text-align: <?php echo $carousel_fourth_text_pos ?>;"><?php if($carousel_fourth_text_url) { echo '<a class="carousel_fourth" href="' . $carousel_fourth_text_url . '">'; } ?><?php echo $carousel_fourth_text ?><?php if($carousel_fourth_text_url) { echo '</a>'; } ?></h1>
 						</div>
 						<?php } ?>
 					</div>
@@ -99,7 +146,7 @@
 						<img src="<?php echo $carousel_fifth; ?>" class="img-responsive">
 						<?php if ($carousel_fifth_text) { ?>
 						<div class="carousel-caption">
-							<h1 style="text-align: <?php echo $carousel_fifth_text_pos ?>;"><?php if($carousel_fifth_text_url) { echo '<a href="' . $carousel_fifth_text_url . '">'; } ?><?php echo $carousel_fifth_text ?><?php if($carousel_fifth_text_url) { echo '</a>'; } ?></h1>
+							<h1 style="text-align: <?php echo $carousel_fifth_text_pos ?>;"><?php if($carousel_fifth_text_url) { echo '<a class="carousel_fifth" href="' . $carousel_fifth_text_url . '">'; } ?><?php echo $carousel_fifth_text ?><?php if($carousel_fifth_text_url) { echo '</a>'; } ?></h1>
 						</div>
 						<?php } ?>
 					</div>
