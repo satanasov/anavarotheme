@@ -34,20 +34,18 @@ function anavaro_customize_carousel($wp_customize) {
 	// First image control
 	$wp_customize->add_setting( 'carousel_first_slide_image',
 		array(
-			'sanitize_callback' => 'esc_url_raw',
-			'default' => get_template_directory_uri() . '/img/4054180179_e146a52baa_o.jpg'
+			'default_image' => get_template_directory_uri() . '/img/4054180179_e146a52baa_o.jpg'
 		)
 	);
 	$wp_customize->add_control(
-		new WP_Customize_Control(
+		new WP_Customize_Image_Control(
 			$wp_customize,
 			'carousel_first_slide_image',
 			array(
 				'label'          => __( 'First image:', 'anavaro' ),
 				'description' => __( 'What image should we use for first carousel slide? <br /> Best used resolution 1200x575', 'anavaro' ),
 				'section'        => 'anavaro_carousel_options',
-				'type'           => 'url',
-				'sanitize_callback' => 'esc_url_raw',
+				'setting'		=> 'carousel_first_slide_image'
 			)
 		)
 	);
@@ -152,19 +150,18 @@ function anavaro_customize_carousel($wp_customize) {
 	// Second image control
 	$wp_customize->add_setting( 'carousel_second_slide_image',
 		array(
-			'default' => get_template_directory_uri() . '/img/18046343975_65c2031027_k.jpg'
+			'default_image' => get_template_directory_uri() . '/img/18046343975_65c2031027_k.jpg'
 		)
 	);
 	$wp_customize->add_control(
-		new WP_Customize_Control(
+		new WP_Customize_Image_Control(
 			$wp_customize,
 			'carousel_second_slide_image',
 			array(
 				'label'          => __( 'Second image:', 'anavaro' ),
 				'description' => __( 'What image should we use for second carousel slide? <br /> Best used resolution 1200x575', 'anavaro' ),
 				'section'        => 'anavaro_carousel_options',
-				'type'           => 'url',
-				'sanitize_callback' => 'esc_url_raw',
+				'setting'		=> 'carousel_second_slide_image'
 			)
 		)
 	);
@@ -268,19 +265,18 @@ function anavaro_customize_carousel($wp_customize) {
 	// Third image control
 	$wp_customize->add_setting( 'carousel_third_slide_image',
 		array(
-			'default' => get_template_directory_uri() . '/img/8499155449_1235a88784_k.jpg'
+			'default_image' => get_template_directory_uri() . '/img/8499155449_1235a88784_k.jpg'
 		)
 	);
 	$wp_customize->add_control(
-		new WP_Customize_Control(
+		new WP_Customize_Image_Control(
 			$wp_customize,
 			'carousel_third_slide_image',
 			array(
 				'label'          => __( 'Third image:', 'anavaro' ),
 				'description' => __( 'What image should we use for third carousel slide? <br /> Best used resolution 1200x575', 'anavaro' ),
 				'section'        => 'anavaro_carousel_options',
-				'type'           => 'url',
-				'sanitize_callback' => 'esc_url_raw',
+				'setting'		=> 'carousel_third_slide_image'
 			)
 		)
 	);
@@ -384,19 +380,18 @@ function anavaro_customize_carousel($wp_customize) {
 	// Fourth image control
 	$wp_customize->add_setting( 'carousel_fourth_slide_image',
 		array(
-			'default' => ''
+			'default_image' => ''
 		)
 	);
 	$wp_customize->add_control(
-		new WP_Customize_Control(
+		new WP_Customize_Image_Control(
 			$wp_customize,
 			'carousel_fourth_slide_image',
 			array(
 				'label'          => __( 'Fourth image:', 'anavaro' ),
 				'description' => __( 'What image should we use for fourth carousel slide? <br /> Best used resolution 1200x575', 'anavaro' ),
 				'section'        => 'anavaro_carousel_options',
-				'type'           => 'url',
-				'sanitize_callback' => 'esc_url_raw',
+				'setting'		=> 'carousel_fourth_slide_image'
 			)
 		)
 	);
@@ -500,19 +495,18 @@ function anavaro_customize_carousel($wp_customize) {
 	// Fifth image control
 	$wp_customize->add_setting( 'carousel_fifth_slide_image',
 		array(
-			'default' => ''
+			'default_image' => ''
 		)
 	);
 	$wp_customize->add_control(
-		new WP_Customize_Control(
+		new WP_Customize_Image_Control(
 			$wp_customize,
 			'carousel_fifth_slide_image',
 			array(
 				'label'          => __( 'Fifth image:', 'anavaro' ),
 				'description' => __( 'What image should we use for fifth carousel slide? <br /> Best used resolution 1200x575', 'twentyfifteen' ),
 				'section'        => 'anavaro_carousel_options',
-				'type'           => 'url',
-				'sanitize_callback' => 'esc_url_raw',
+				'setting'		=> 'carousel_fifth_slide_image'
 			)
 		)
 	);
