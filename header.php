@@ -93,7 +93,7 @@ twitterWidgets.type = 'text/javascript';
 twitterWidgets.async = true;
 twitterWidgets.src = 'https://platform.twitter.com/widgets.js';
 // Setup a callback to track once the script loads.
-twitterWidgets.onload = _ga.trackTwitter;
+twitterWidgets.onload = _gaq.trackTwitter;
 document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
 })();
 </script>
