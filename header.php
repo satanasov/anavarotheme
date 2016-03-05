@@ -70,7 +70,7 @@
             })();
             </script>
         <!-- Google Analytics Social Button Tracking -->
-        <script type="text/javascript" src="http://lab.anavaro.com/cdn/ga_social_tracking.js"></script>
+        <script type="text/javascript" src="https://www.google-analytics.com/analytics.js"></script>
             <?php }
             if (get_option('anavaro_usegpo') == "on") { ?>
             <script type="text/javascript">
