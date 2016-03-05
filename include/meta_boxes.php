@@ -196,9 +196,9 @@
 				echo '<tr>
 					<td>
 						<label for="workstart">' . __('Start date', 'anavaro') . '</label><br />
-						<input type="date" id="work[' . $counter . '][start]" name="work[' . $counter . '][start]" value="' . $var['start'] . '"/>
+						<input type="text" id="work[' . $counter . '][start]" name="work[' . $counter . '][start]" value="' . $var['start'] . '"/>
 						<label for="workend">' . __('End date', 'anavaro') . '</label><br />
-						<input type="date" id="work[' . $counter . '][end]" name="work[' . $counter . '][end]" value="' . $var['end'] . '"/>
+						<input type="text" id="work[' . $counter . '][end]" name="work[' . $counter . '][end]" value="' . $var['end'] . '"/>
 					</td>
 					<td>
 						<label for="position">' . __('Position', 'anavaro') . '</label><br />
@@ -217,9 +217,9 @@
 			echo '<tr>
 				<td>
 					<label for="workstart">' . __('Start date', 'anavaro') . '</label><br />
-					<input type="date" id="work[0][start]" name="work[0][start]" />
+					<input type="text" id="work[0][start]" name="work[0][start]" />
 					<label for="workend">' . __('End date', 'anavaro') . '</label><br />
-					<input type="date" id="work[0][end]" name="work[0][end]" />
+					<input type="text" id="work[0][end]" name="work[0][end]" />
 				</td>
 				<td>
 					<label for="position">' . __('Position', 'anavaro') . '</label><br />
@@ -241,9 +241,9 @@
 				jQuery('.work-table').append('<tr>' +
 					'<td>' + 
 						'<label for="workstart"><?php  _e('Start date', 'anavaro'); ?></label><br />' + 
-						'<input type="date" id="work[' + ( jcounter + 1) + '][start]" name="work[' + ( jcounter + 1) + '][start]" />' +
+						'<input type="Text" id="work[' + ( jcounter + 1) + '][start]" name="work[' + ( jcounter + 1) + '][start]" />' +
 						'<label for="workend"><?php  _e('End date', 'anavaro'); ?></label><br />' +
-						'<input type="date" id="work[' + ( jcounter + 1) + '][end]" name="work[' + ( jcounter + 1) + '][end]" />' +
+						'<input type="text" id="work[' + ( jcounter + 1) + '][end]" name="work[' + ( jcounter + 1) + '][end]" />' +
 					'</td>' +
 					'<td>' +
 						'<label for="position"><?php  _e('Position', 'anavaro'); ?></label><br />' +
