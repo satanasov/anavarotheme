@@ -11,5 +11,6 @@
 = Fix white spaces after new post. Now showing 4 instead of 5 new posts
 + Add CHANGELOG.txt
 
-19.01.2016
-+ Add support for color selector on carousel
+05.03.2016
+= Fix small HTTP bugs
+= Fix Date to text in user info.
