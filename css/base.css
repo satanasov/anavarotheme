@@ -321,5 +321,31 @@ img.aligncenter {
 	box-shadow: 0 0 5px 1px #969696;
 }
 
+/**
+* Single post thingies
+*/
 
-
+.wp-caption  {
+	text-align: center;
+}
+.alignleft {
+	margin-right: 8px;
+	background-color: #F2F2EC;
+	display: inline;
+	float: left;
+}
+.aligncenter {
+	margin: auto;
+	background-color: #F2F2EC;
+	display: block;
+}
+.alignright {
+	margin-right: 8px;
+	background-color: #F2F2EC;
+	display: inline;
+	float: right;
+}
+.alignnone {
+	background-color: #F2F2EC;
+	display: block;
+}
