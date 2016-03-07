@@ -328,6 +328,10 @@ img.aligncenter {
 .wp-caption  {
 	text-align: center;
 }
+.wp-caption-text {
+	padding-left: 2px;
+	padding-right: 2px;
+}
 .alignleft {
 	margin-right: 8px;
 	margin-left: 8px;
@@ -335,19 +339,13 @@ img.aligncenter {
 	display: inline;
 	float: left;
 }
-.allignleft p {
-	padding-left: 2px;
-	padding-right: 2px;
-}
+
 .aligncenter {
 	margin: auto;
 	background-color: #F2F2EC;
 	display: block;
 }
-.aligncenter p {
-	padding-left: 2px;
-	padding-right: 2px;
-}
+
 .alignright {
 	margin-right: 8px;
 	margin-left: 8px;
@@ -355,15 +353,8 @@ img.aligncenter {
 	display: inline;
 	float: right;
 }
-.alignright p {
-	padding-left: 2px;
-	padding-right: 2px;
-}
+
 .alignnone {
 	background-color: #F2F2EC;
 	display: block;
-}
-.alignnone p {
-	padding-left: 2px;
-	padding-right: 2px;
 }
